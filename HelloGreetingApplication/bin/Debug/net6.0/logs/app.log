@@ -1,0 +1,62 @@
+2025-03-03 22:50:35.5723 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-03 22:50:35.6364 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-03 22:50:35.7196 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-03 22:50:35.7196 | INFO | Hosting environment: Development | 
+2025-03-03 22:50:35.7548 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-03 22:50:37.9715 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting - - | 
+2025-03-03 22:50:38.4327 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-03 22:50:38.4523 | INFO | Route matched with {action = "Get", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-03 22:50:38.4523 | INFO | GET request received to fetch all records. | 
+2025-03-03 22:50:38.4636 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.RequestModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-03 22:50:38.4954 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication) in 35.1887ms | 
+2025-03-03 22:50:38.4954 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-03 22:50:38.5665 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting - - - 200 - application/json;+charset=utf-8 610.9385ms | 
+2025-03-03 22:51:33.0821 | INFO | Application is starting... | 
+2025-03-03 22:51:36.1101 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-03 22:51:36.1101 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-03 22:51:36.1970 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-03 22:51:36.1970 | INFO | Hosting environment: Development | 
+2025-03-03 22:51:36.1970 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-03 22:51:37.5039 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger - - | 
+2025-03-03 22:51:37.8366 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger - - - 301 0 - 335.4738ms | 
+2025-03-03 22:51:37.8638 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-03 22:51:38.2631 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 404.1754ms | 
+2025-03-03 22:51:38.3045 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-03 22:51:38.3045 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-03 22:51:38.3197 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-03 22:51:38.3197 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-03 22:51:38.3197 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-03 22:51:38.3197 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.1445ms | 
+2025-03-03 22:51:38.3197 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-03 22:51:38.3197 | INFO | Sending file. Request path: '/index.css'. Physical path: 'N/A' | 
+2025-03-03 22:51:38.3631 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-03 22:51:38.3867 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 200 202 text/css 68.2250ms | 
+2025-03-03 22:51:38.4010 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 70.2270ms | 
+2025-03-03 22:51:38.4010 | INFO | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' | 
+2025-03-03 22:51:38.4184 | INFO | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' | 
+2025-03-03 22:51:38.4184 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 200 154948 text/css 117.0223ms | 
+2025-03-03 22:51:38.4184 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 200 229223 application/javascript 105.8935ms | 
+2025-03-03 22:51:38.5195 | INFO | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' | 
+2025-03-03 22:51:38.5262 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 200 1466324 application/javascript 205.6609ms | 
+2025-03-03 22:51:39.1368 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 773.6786ms | 
+2025-03-03 22:51:39.4768 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-03 22:51:39.4961 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - | 
+2025-03-03 22:51:39.4961 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
+2025-03-03 22:51:39.5088 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 32.0075ms | 
+2025-03-03 22:51:39.5578 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 60.7368ms | 
+2025-03-03 22:56:00.2390 | INFO | Application is starting... | 
+2025-03-03 22:56:01.7669 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-03 22:56:01.7669 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-03 22:56:01.9114 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-03 22:56:01.9147 | INFO | Hosting environment: Development | 
+2025-03-03 22:56:01.9147 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-03 22:56:03.0073 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-03 22:56:04.3147 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1309.7655ms | 
+2025-03-03 22:56:04.4047 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-03 22:56:04.4137 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-03 22:56:04.4137 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-03 22:56:04.4391 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 28.4292ms | 
+2025-03-03 22:56:04.4480 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 43.2785ms | 
+2025-03-03 22:56:04.9464 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 532.7562ms | 
+2025-03-03 22:56:05.0636 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-03 22:56:05.0768 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.1772ms | 
