@@ -1,4 +1,6 @@
+using HelloGreetingApplication.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Logging;
 using ModelLayer.Model;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ namespace HelloGreetingApplication.Controllers
     public class HelloGreetingController : ControllerBase
     {
         private readonly ILogger<HelloGreetingController> _logger;
-
+        private readonly IHelloGreetingService _helloGreetingService;
         private static Dictionary<int, RequestModel> inMemoryStore = new Dictionary<int, RequestModel>
         {
             { 1, new RequestModel { Key = "Greeting", Value = "Hello, World!" } },
@@ -22,8 +24,9 @@ namespace HelloGreetingApplication.Controllers
             { 3, new RequestModel { Key = "Welcome", Value = "Welcome to the API!" } }
         };
 
-        public HelloGreetingController(ILogger<HelloGreetingController> logger)
+        public HelloGreetingController(IHelloGreetingService greetings,ILogger<HelloGreetingController> logger)
         {
+            _helloGreetingService = greetings;
             _logger = logger;
         }
 
@@ -43,6 +46,22 @@ namespace HelloGreetingApplication.Controllers
             });
         }
 
+        /// <summary>
+        /// Get method to fetch greeting message
+        /// </summary>
+        /// <returns>response model</returns>
+        [HttpGet("greeting")]
+        public IActionResult GetGreeting(){
+            _logger.LogInformation("Fetching greeting message.");
+            string message = _helloGreetingService.HelloGreeting();
+
+            return Ok(new ResponseModel<string>
+            {
+                success = true,
+                message = "Greeting retrieved successfully",
+                data = message
+            });
+        }
         /// <summary>
         /// Post method to add a key-Value pair
         /// </summary>
