@@ -10,6 +10,7 @@ namespace RepositoryLayer.Interface
 {
     public interface IGreetingRL
     {
-        void SaveGreeting(GreetingModel greeting);
+        void SaveGreeting(GreetingModel greeting);//UC4
+        GreetingModel GetGreetingById(int id);
     }
 }

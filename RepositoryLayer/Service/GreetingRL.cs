@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using RepositoryLayer.Content;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
+using NLog;
 
 namespace RepositoryLayer.Service
 {
@@ -21,7 +22,7 @@ namespace RepositoryLayer.Service
             this._logger = logger;
         }
 
-        // Save greeting to the database
+        // UC4 : Save greeting to the database
         public void SaveGreeting(GreetingModel greeting)
         {
             try
@@ -50,6 +51,19 @@ namespace RepositoryLayer.Service
                 _logger.LogError(ex, "Error occurred while saving the greeting.");
                 throw;
             }
+        }
+
+        //UC5 :Retrieves a greeting message by its ID.
+        public GreetingModel GetGreetingById(int id)
+        {
+            _logger.LogInformation("Fetching greeting with ID: {Id}", id);
+            var entity = dbContext.Greetings.Find(id);
+            if (entity == null)
+            {
+                _logger.LogWarning("Greeting with ID {Id} not found.", id);
+                return null;
+            }
+            return new GreetingModel { Id = entity.Id, Message = entity.GreetingMessage };
         }
 
     }
