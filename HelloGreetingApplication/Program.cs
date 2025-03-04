@@ -1,7 +1,11 @@
-using HelloGreetingApplication.Interface;
-using HelloGreetingApplication.Service;
+using BusinessLayer.Interface;
+using BusinessLayer.Service;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using RepositoryLayer.Content;
+using RepositoryLayer.Interface;
+using RepositoryLayer.Service;
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
 logger.Info("Application is starting...");
 
@@ -13,14 +17,18 @@ try
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
+    // SQL Database Connection
+    var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
+    builder.Services.AddDbContext<GreetingDbContext>(options => options.UseSqlServer(connectionString),ServiceLifetime.Scoped);
+    
     // Adding Swagger
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
     // Add services to the container.
-
     builder.Services.AddControllers();
-    builder.Services.AddScoped<IHelloGreetingService,HelloGreetingService>();
+    builder.Services.AddScoped<IGreetingRL, GreetingRL>();  // Register Repository Layer
+    builder.Services.AddScoped<IGreetingBL, GreetingBL>();  // Register Business Layer
 
     var app = builder.Build();
 

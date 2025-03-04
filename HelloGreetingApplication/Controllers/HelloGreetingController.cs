@@ -1,4 +1,5 @@
-using HelloGreetingApplication.Interface;
+
+using BusinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Logging;
@@ -16,7 +17,7 @@ namespace HelloGreetingApplication.Controllers
     public class HelloGreetingController : ControllerBase
     {
         private readonly ILogger<HelloGreetingController> _logger;
-        private readonly IHelloGreetingService _helloGreetingService;
+        private readonly IGreetingBL greetingBL;
         private static Dictionary<int, RequestModel> inMemoryStore = new Dictionary<int, RequestModel>
         {
             { 1, new RequestModel { Key = "Greeting", Value = "Hello, World!" } },
@@ -24,12 +25,32 @@ namespace HelloGreetingApplication.Controllers
             { 3, new RequestModel { Key = "Welcome", Value = "Welcome to the API!" } }
         };
 
-        public HelloGreetingController(IHelloGreetingService greetings,ILogger<HelloGreetingController> logger)
+        public HelloGreetingController(IGreetingBL greetings,ILogger<HelloGreetingController> logger)
         {
-            _helloGreetingService = greetings;
+            greetingBL = greetings;
             _logger = logger;
         }
 
+        [HttpPost("save")]
+        public IActionResult SaveGreeting([FromBody] GreetingModel greetingModel)
+        {
+            try
+            {
+                if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
+                {
+                    _logger.LogError("Invalid greeting data received.");
+                    return BadRequest("Greeting message cannot be empty.");
+                }
+
+                greetingBL.SaveGreeting(greetingModel);
+                return Ok("Greeting saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error saving greeting: {ex.Message}");
+                return StatusCode(500, "An error occurred while saving the greeting.");
+            }
+        }
         /// <summary>
         /// Get method to fetch all records
         /// </summary>
@@ -53,7 +74,7 @@ namespace HelloGreetingApplication.Controllers
         [HttpGet("greeting")]
         public IActionResult GetGreeting(){
             _logger.LogInformation("Fetching greeting message.");
-            string message = _helloGreetingService.HelloGreeting();
+            string message = greetingBL.HelloGreeting();
 
             return Ok(new ResponseModel<string>
             {
@@ -70,7 +91,7 @@ namespace HelloGreetingApplication.Controllers
         /// <param name="lastName"></param>
         /// <returns></returns>
         [HttpGet("greet")]
-        public IActionResult GetGreeting(string? firstName,string? lastName)
+        public IActionResult GetGreetingByName(string? firstName,string? lastName)
         {
             string message = "Hello";
 

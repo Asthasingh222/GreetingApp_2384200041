@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModelLayer.Model;
 
 namespace BusinessLayer.Interface
 {
     public interface IGreetingBL
     {
+    //UC2
+    string HelloGreeting();
+
+    //UC4
+    void SaveGreeting(GreetingModel greeting);
     }
 }
