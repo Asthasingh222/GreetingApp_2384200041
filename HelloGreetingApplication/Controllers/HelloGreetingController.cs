@@ -32,6 +32,27 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
+        /// Delete method to delete a greeting message.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>response model</returns>
+        [HttpDelete("deleteGreeting/{id}")]
+        public IActionResult DeleteGreeting(int id)
+        {
+            _logger.LogInformation("API: Received request to delete greeting with ID: {Id}", id);
+
+            bool isDeleted = greetingBL.DeleteGreeting(id);
+            if (!isDeleted)
+            {
+                _logger.LogWarning("API: Greeting with ID {Id} not found for deletion.", id);
+                return NotFound(new { message = "Greeting not found" });
+            }
+
+            _logger.LogInformation("API: Greeting with ID {Id} deleted successfully.", id);
+            return Ok(new { success = true, message = "Greeting deleted successfully" });
+        }
+
+        /// <summary>
         /// Updates a greeting message by id
         /// </summary>
         /// <param name="id"></param>

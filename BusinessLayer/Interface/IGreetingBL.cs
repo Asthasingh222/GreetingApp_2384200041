@@ -23,5 +23,8 @@ namespace BusinessLayer.Interface
 
         //UC7
         bool UpdateGreeting(int id, GreetingModel greeting);
+
+        //UC8
+        bool DeleteGreeting(int id);
     }
 }

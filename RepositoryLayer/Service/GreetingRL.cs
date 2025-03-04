@@ -93,5 +93,22 @@ namespace RepositoryLayer.Service
             return true;
         }
 
+        //UC8: Deletes a greeting message from the database
+        public bool DeleteGreeting(int id)
+        {
+            _logger.LogInformation("Attempting to delete greeting with ID: {Id}", id);
+            var entity = dbContext.Greetings.Find(id);
+            if (entity == null)
+            {
+                _logger.LogWarning("Greeting with ID {Id} not found for deletion.", id);
+                return false;
+            }
+
+            dbContext.Greetings.Remove(entity);
+            dbContext.SaveChanges();
+            _logger.LogInformation("Greeting with ID {Id} deleted successfully.", id);
+            return true;
+        }
+
     }
 }
