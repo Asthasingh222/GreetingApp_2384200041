@@ -1,3 +1,5 @@
+using HelloGreetingApplication.Interface;
+using HelloGreetingApplication.Service;
 using NLog;
 using NLog.Web;
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
@@ -18,6 +20,7 @@ try
     // Add services to the container.
 
     builder.Services.AddControllers();
+    builder.Services.AddScoped<IHelloGreetingService,HelloGreetingService>();
 
     var app = builder.Build();
 
