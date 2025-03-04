@@ -9,6 +9,7 @@ using RepositoryLayer.Content;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 using NLog;
+using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLayer.Service
 {
@@ -73,6 +74,23 @@ namespace RepositoryLayer.Service
             return dbContext.Greetings
                 .Select(g => new GreetingModel { Id = g.Id, Message = g.GreetingMessage })
                 .ToList();
+        }
+
+        //UC7: Updates an existing greeting message in the database
+        public bool UpdateGreeting(int id, GreetingModel greeting)
+        {
+            var existingGreeting = dbContext.Greetings.Find(id);
+            if (existingGreeting == null)
+            {
+                _logger.LogWarning("RL: Greeting with ID {Id} not found.", id);
+                return false;
+            }
+
+            existingGreeting.GreetingMessage = greeting.Message;
+            dbContext.SaveChanges();
+
+            _logger.LogInformation("RL: Greeting with ID {Id} updated successfully.", id);
+            return true;
         }
 
     }

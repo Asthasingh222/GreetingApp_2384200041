@@ -19,8 +19,9 @@ try
 
     // SQL Database Connection
     var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
-    builder.Services.AddDbContext<GreetingDbContext>(options => options.UseSqlServer(connectionString),ServiceLifetime.Scoped);
-    
+    builder.Services.AddDbContext<GreetingDbContext>(options =>
+     options.UseSqlServer(connectionString));
+
     // Adding Swagger
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();

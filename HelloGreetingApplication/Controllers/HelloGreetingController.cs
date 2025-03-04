@@ -32,9 +32,39 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
+        /// Updates a greeting message by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="greetingModel"></param>
+        /// <returns>response model</returns>
+        [HttpPut("updateGreeting/{id}")]
+        public IActionResult UpdateGreeting(int id, [FromBody] GreetingModel greetingModel)
+        {
+            _logger.LogInformation("API: Received request to update greeting with ID: {Id}", id);
+
+            if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
+            {
+                _logger.LogError("API: Invalid greeting data for update.");
+                return BadRequest(new { success = false, message = "Greeting message cannot be empty" });
+            }
+
+            bool updated = greetingBL.UpdateGreeting(id, greetingModel);
+
+            if (!updated)
+            {
+                _logger.LogWarning("API: Greeting with ID {Id} not found.", id);
+                return NotFound(new { success = false, message = "Greeting not found" });
+            }
+
+            _logger.LogInformation("API: Greeting with ID {Id} updated successfully.", id);
+            return Ok(new { success = true, message = "Greeting updated successfully" });
+        }
+
+
+        /// <summary>
         /// Post method to Retrieve all greeting messages.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>response model</returns>
         [HttpGet("all")]
         public IActionResult GetAllGreetings()
         {
@@ -47,9 +77,12 @@ namespace HelloGreetingApplication.Controllers
                 data = greetings
             });
         }
+
         /// <summary>
         /// Retrieves a greeting message by ID.
         /// </summary>
+        /// <param name="id"></param>
+        /// <returns>response model</returns>
         [HttpGet("{id}")]
         public IActionResult GetGreetingById(int id)
         {

@@ -666,3 +666,173 @@ FROM [Greetings] AS [g] |
 2025-03-04 22:46:16.9785 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 3284.5035ms | 
 2025-03-04 22:46:16.9785 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' | 
 2025-03-04 22:46:17.0010 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/all - - - 200 - application/json;+charset=utf-8 3362.8537ms | 
+2025-03-04 23:00:26.7306 | INFO | Application is starting... | 
+2025-03-04 23:00:29.1424 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:00:29.4403 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:00:29.6175 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:00:29.6175 | INFO | Hosting environment: Development | 
+2025-03-04 23:00:29.6175 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:00:31.7563 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:00:32.6107 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 843.0768ms | 
+2025-03-04 23:00:32.9394 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:00:32.9710 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:00:33.0729 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 133.4949ms | 
+2025-03-04 23:00:33.3078 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 336.7948ms | 
+2025-03-04 23:00:33.6274 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:00:34.1257 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 498.3734ms | 
+2025-03-04 23:00:34.2431 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:00:34.2743 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-04 23:00:34.3041 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 61.0024ms | 
+2025-03-04 23:02:10.9845 | INFO | Application is starting... | 
+2025-03-04 23:02:13.8666 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:02:13.8666 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:02:13.9608 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:02:13.9608 | INFO | Hosting environment: Development | 
+2025-03-04 23:02:13.9608 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:02:16.2652 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:02:18.7282 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 2466.2440ms | 
+2025-03-04 23:02:18.8687 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:02:18.9270 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:02:18.9270 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:02:18.9397 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 77.4522ms | 
+2025-03-04 23:02:18.9397 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 24.0832ms | 
+2025-03-04 23:02:19.0702 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 143.2012ms | 
+2025-03-04 23:02:19.2294 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:02:19.2447 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-04 23:02:19.2626 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 33.0952ms | 
+2025-03-04 23:07:38.9580 | INFO | Application is starting... | 
+2025-03-04 23:07:41.7810 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:07:41.7869 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:07:41.9106 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:07:41.9106 | INFO | Hosting environment: Development | 
+2025-03-04 23:07:41.9106 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:07:43.2422 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:07:43.9339 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 695.3998ms | 
+2025-03-04 23:07:44.0743 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:07:44.0743 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:07:44.1296 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:07:44.1443 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 69.9044ms | 
+2025-03-04 23:07:44.1443 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 70.6432ms | 
+2025-03-04 23:07:44.2492 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 119.6134ms | 
+2025-03-04 23:07:44.3368 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:07:44.3794 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-04 23:07:44.3946 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 57.7625ms | 
+2025-03-04 23:08:46.7802 | INFO | Application is starting... | 
+2025-03-04 23:08:48.9259 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:08:48.9259 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:08:49.0251 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:08:49.0251 | INFO | Hosting environment: Development | 
+2025-03-04 23:08:49.0251 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:08:50.8556 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:08:51.9524 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:08:51.9524 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:08:51.9769 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1102.1029ms | 
+2025-03-04 23:08:52.0833 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:08:52.1001 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 146.5361ms | 
+2025-03-04 23:08:52.1001 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 151.7392ms | 
+2025-03-04 23:08:52.1951 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.0436ms | 
+2025-03-04 23:08:52.2592 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:08:52.2732 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 14.0062ms | 
+2025-03-04 23:14:33.6518 | INFO | Application is starting... | 
+2025-03-04 23:14:36.9347 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:14:36.9347 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:14:37.0098 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:14:37.0098 | INFO | Hosting environment: Development | 
+2025-03-04 23:14:37.0098 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:14:38.0965 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:14:39.3526 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1259.7676ms | 
+2025-03-04 23:14:39.4169 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:14:39.4169 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:14:39.4169 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:14:39.4308 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 13.8174ms | 
+2025-03-04 23:14:39.4308 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 14.5534ms | 
+2025-03-04 23:14:39.5529 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 135.9823ms | 
+2025-03-04 23:14:39.6245 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:14:39.6308 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-04 23:14:39.6484 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 22.8993ms | 
+2025-03-04 23:16:46.4437 | INFO | Request starting HTTP/2 GET https://localhost:7084/swagger/v1/swagger.json - - | 
+2025-03-04 23:16:46.6442 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-04 23:16:46.9320 | INFO | Request finished HTTP/2 GET https://localhost:7084/swagger/v1/swagger.json - - - 500 - text/html;+charset=utf-8 490.4521ms | 
+2025-03-04 23:16:47.1305 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:16:47.1305 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:16:47.1305 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 2.5251ms | 
+2025-03-04 23:16:47.4897 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 358.2237ms | 
+2025-03-04 23:16:47.5717 | INFO | Request starting HTTP/2 GET https://localhost:7084/favicon.ico - - | 
+2025-03-04 23:16:47.5949 | INFO | Request finished HTTP/2 GET https://localhost:7084/favicon.ico - - - 404 0 - 23.1707ms | 
+2025-03-04 23:18:26.6479 | INFO | Application is starting... | 
+2025-03-04 23:18:34.0203 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 23:18:34.0203 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 23:18:34.1085 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 23:18:34.1085 | INFO | Hosting environment: Development | 
+2025-03-04 23:18:34.1106 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 23:18:35.5547 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 23:18:37.4729 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1920.2485ms | 
+2025-03-04 23:18:37.5966 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 23:18:37.5966 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 23:18:37.6148 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 17.8525ms | 
+2025-03-04 23:18:37.6632 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 66.5295ms | 
+2025-03-04 23:18:37.9909 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 23:18:38.5366 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 545.6411ms | 
+2025-03-04 23:18:39.3232 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 23:18:39.4372 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.0281ms | 
+2025-03-04 23:48:53.1146 | INFO | Request starting HTTP/2 PUT https://localhost:7084/HelloGreeting/updateGreeting/2 application/json 46 | 
+2025-03-04 23:48:53.2610 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)' | 
+2025-03-04 23:48:53.4178 | INFO | Route matched with {action = "UpdateGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateGreeting(Int32, ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 23:48:54.2057 | INFO | API: Received request to update greeting with ID: 2 | 
+2025-03-04 23:48:54.2057 | INFO | BL: Updating greeting with ID: 2 | 
+2025-03-04 23:48:55.2425 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-04 23:48:56.9628 | INFO | Executed DbCommand (130ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-04 23:48:57.2449 | INFO | Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Greetings] SET [GreetingMessage] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; | 
+2025-03-04 23:48:57.2671 | INFO | RL: Greeting with ID 2 updated successfully. | 
+2025-03-04 23:48:57.2671 | INFO | API: Greeting with ID 2 updated successfully. | 
+2025-03-04 23:48:57.2857 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 23:48:57.3106 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication) in 3877.7969ms | 
+2025-03-04 23:48:57.3106 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)' | 
+2025-03-04 23:48:57.3359 | INFO | Request finished HTTP/2 PUT https://localhost:7084/HelloGreeting/updateGreeting/2 application/json 46 - 200 - application/json;+charset=utf-8 4222.5552ms | 

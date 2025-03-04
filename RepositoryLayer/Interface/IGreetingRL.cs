@@ -13,5 +13,6 @@ namespace RepositoryLayer.Interface
         void SaveGreeting(GreetingModel greeting);//UC4
         GreetingModel GetGreetingById(int id);//UC5
         List<GreetingModel> GetAllGreetings(); //UC6
+        bool UpdateGreeting(int id, GreetingModel greeting); //UC7
     }
 }
