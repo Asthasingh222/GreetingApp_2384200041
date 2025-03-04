@@ -66,6 +66,13 @@ namespace BusinessLayer.Service
             return greetingRL.UpdateGreeting(id, greeting);
         }
 
+        //UC8: Deletes a greeting message
+        public bool DeleteGreeting(int id)
+        {
+            logger.LogInformation("BL: Deleting greeting with ID: {Id}", id);
+            return greetingRL.DeleteGreeting(id);
+        }
+
 
     }
 }

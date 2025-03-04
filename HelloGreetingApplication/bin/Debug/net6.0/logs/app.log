@@ -836,3 +836,91 @@ SELECT @@ROWCOUNT; |
 2025-03-04 23:48:57.3106 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication) in 3877.7969ms | 
 2025-03-04 23:48:57.3106 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)' | 
 2025-03-04 23:48:57.3359 | INFO | Request finished HTTP/2 PUT https://localhost:7084/HelloGreeting/updateGreeting/2 application/json 46 - 200 - application/json;+charset=utf-8 4222.5552ms | 
+2025-03-05 00:11:56.6330 | INFO | Application is starting... | 
+2025-03-05 00:11:58.8289 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 00:11:58.8289 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 00:11:58.9325 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 00:11:58.9325 | INFO | Hosting environment: Development | 
+2025-03-05 00:11:58.9325 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 00:12:02.4191 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-05 00:12:03.6818 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1266.3612ms | 
+2025-03-05 00:12:03.8063 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-05 00:12:03.8063 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-05 00:12:03.8063 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-05 00:12:03.8177 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 11.4309ms | 
+2025-03-05 00:12:03.8295 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 22.4710ms | 
+2025-03-05 00:12:04.3540 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 547.2100ms | 
+2025-03-05 00:12:04.4810 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-05 00:12:04.5050 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "DELETE HelloGreeting/{id}" for actions - HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication), HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-05 00:12:04.5285 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 47.4639ms | 
+2025-03-05 00:12:59.6552 | INFO | Application is starting... | 
+2025-03-05 00:13:01.3197 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 00:13:01.3197 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 00:13:01.4088 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 00:13:01.4088 | INFO | Hosting environment: Development | 
+2025-03-05 00:13:01.4088 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 00:13:03.0983 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-05 00:13:04.4539 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1326.7654ms | 
+2025-03-05 00:13:04.5062 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-05 00:13:04.5181 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-05 00:13:04.5181 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-05 00:13:04.5181 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 19.4503ms | 
+2025-03-05 00:13:04.5357 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 22.7313ms | 
+2025-03-05 00:13:04.7062 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 188.0872ms | 
+2025-03-05 00:13:04.8743 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-05 00:13:04.8927 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.3721ms | 
+2025-03-05 00:13:15.3158 | INFO | Request starting HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/3 - - | 
+2025-03-05 00:13:15.4281 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-05 00:13:15.4652 | INFO | Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-05 00:13:15.8944 | INFO | API: Received request to delete greeting with ID: 3 | 
+2025-03-05 00:13:15.8944 | INFO | BL: Deleting greeting with ID: 3 | 
+2025-03-05 00:13:15.9075 | INFO | Attempting to delete greeting with ID: 3 | 
+2025-03-05 00:13:16.9180 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-05 00:13:18.7420 | INFO | Executed DbCommand (257ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-05 00:13:19.2742 | INFO | Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Greetings]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; | 
+2025-03-05 00:13:19.3213 | INFO | Greeting with ID 3 deleted successfully. | 
+2025-03-05 00:13:19.3213 | INFO | API: Greeting with ID 3 deleted successfully. | 
+2025-03-05 00:13:19.3615 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-05 00:13:19.3862 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 3908.2774ms | 
+2025-03-05 00:13:19.3862 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-05 00:13:19.4208 | INFO | Request finished HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/3 - - - 200 - application/json;+charset=utf-8 4104.9850ms | 
+2025-03-05 00:16:55.2212 | INFO | Application is starting... | 
+2025-03-05 00:16:57.6083 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 00:16:57.6144 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 00:16:57.6916 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 00:16:57.6916 | INFO | Hosting environment: Development | 
+2025-03-05 00:16:57.6916 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 00:19:53.3444 | INFO | Application is starting... | 
+2025-03-05 00:19:55.6784 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 00:19:55.6784 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 00:19:55.8561 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 00:19:55.8736 | INFO | Hosting environment: Development | 
+2025-03-05 00:19:55.9211 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 00:19:58.1046 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-05 00:19:59.1249 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1024.0211ms | 
+2025-03-05 00:19:59.2874 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-05 00:19:59.2874 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-05 00:19:59.2874 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-05 00:19:59.2991 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 11.7108ms | 
+2025-03-05 00:19:59.2991 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 14.4519ms | 
+2025-03-05 00:19:59.5818 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 293.9808ms | 
+2025-03-05 00:20:00.2037 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-05 00:20:00.2037 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - | 
+2025-03-05 00:20:00.2231 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 19.4133ms | 
+2025-03-05 00:20:00.2231 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
+2025-03-05 00:20:00.2231 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 26.2561ms | 

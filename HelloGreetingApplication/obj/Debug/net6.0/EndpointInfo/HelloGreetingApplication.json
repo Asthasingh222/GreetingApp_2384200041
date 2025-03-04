@@ -5,15 +5,42 @@
     "version": "1.0"
   },
   "paths": {
+    "/HelloGreeting/deleteGreeting/{id}": {
+      "delete": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "summary": "Delete method to delete a greeting message.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/HelloGreeting/updateGreeting/{id}": {
       "put": {
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Updates a greeting message by id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -22,6 +49,7 @@
           }
         ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -52,6 +80,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Post method to Retrieve all greeting messages.",
         "responses": {
           "200": {
             "description": "OK"
@@ -64,10 +93,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Retrieves a greeting message by ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -85,10 +116,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Put method to update value by id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -97,6 +130,7 @@
           }
         ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -125,10 +159,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "patch method to patch key-value pair",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -137,6 +173,7 @@
           }
         ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -165,10 +202,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Delete method to delete a record by id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "integer",
@@ -188,7 +227,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Post method to save greeting in database",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -219,6 +260,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Get method to fetch all records",
         "responses": {
           "200": {
             "description": "OK"
@@ -229,7 +271,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Post method to add a key-Value pair",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -260,6 +304,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Get method to fetch greeting message",
         "responses": {
           "200": {
             "description": "OK"
@@ -272,10 +317,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Get method to generate greeting message based on attributes provided",
         "parameters": [
           {
             "name": "firstName",
             "in": "query",
+            "description": "",
             "schema": {
               "type": "string"
             }
@@ -283,6 +330,7 @@
           {
             "name": "lastName",
             "in": "query",
+            "description": "",
             "schema": {
               "type": "string"
             }

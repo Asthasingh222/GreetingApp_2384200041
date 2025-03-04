@@ -1,3 +1,4 @@
+using System.Reflection;
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,11 @@ try
 
     // Adding Swagger
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+    builder.Services.AddSwaggerGen(c =>
+    {
+        var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    });
 
     // Add services to the container.
     builder.Services.AddControllers();
