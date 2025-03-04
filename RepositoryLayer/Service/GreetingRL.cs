@@ -66,5 +66,14 @@ namespace RepositoryLayer.Service
             return new GreetingModel { Id = entity.Id, Message = entity.GreetingMessage };
         }
 
+        //UC6 :Retrieves all greeting messages from the database
+        public List<GreetingModel> GetAllGreetings()
+        {
+            _logger.LogInformation("Fetching all greetings from the database.");
+            return dbContext.Greetings
+                .Select(g => new GreetingModel { Id = g.Id, Message = g.GreetingMessage })
+                .ToList();
+        }
+
     }
 }

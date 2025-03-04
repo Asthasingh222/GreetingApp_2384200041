@@ -32,6 +32,22 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
+        /// Post method to Retrieve all greeting messages.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("all")]
+        public IActionResult GetAllGreetings()
+        {
+            _logger.LogInformation("API: Fetching all greetings.");
+            var greetings = greetingBL.GetAllGreetings();
+            return Ok(new ResponseModel<List<GreetingModel>>
+            {
+                success = true,
+                message = "All greetings retrieved successfully",
+                data = greetings
+            });
+        }
+        /// <summary>
         /// Retrieves a greeting message by ID.
         /// </summary>
         [HttpGet("{id}")]
@@ -54,15 +70,24 @@ namespace HelloGreetingApplication.Controllers
             });
         }
 
+        /// <summary>
+        /// Post method to save greeting in database
+        /// </summary>
+        /// <param name="greetingModel"></param>
+        /// <returns>string</returns>
         [HttpPost("save")]
-        public IActionResult SaveGreeting([FromBody] GreetingModel greetingModel)
+        public IActionResult SaveGreeting(GreetingModel greetingModel)
         {
             try
             {
                 if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
                 {
                     _logger.LogError("Invalid greeting data received.");
-                    return BadRequest("Greeting message cannot be empty.");
+                    return BadRequest(new
+                    {
+                        success = false,
+                        message = "Greeting message cannot be empty"
+                    });
                 }
 
                 greetingBL.SaveGreeting(greetingModel);

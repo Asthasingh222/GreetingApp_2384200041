@@ -636,3 +636,33 @@ WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); |
 2025-03-04 22:26:28.1101 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 31.7206ms | 
 2025-03-04 22:26:28.1101 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
 2025-03-04 22:26:28.1101 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/save application/json 42 - 200 - text/plain;+charset=utf-8 45.3238ms | 
+2025-03-04 22:45:51.9984 | INFO | Application is starting... | 
+2025-03-04 22:45:59.0909 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 22:45:59.1085 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 22:45:59.6268 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 22:45:59.6268 | INFO | Hosting environment: Development | 
+2025-03-04 22:45:59.6552 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 22:46:02.8790 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 22:46:04.0707 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 22:46:04.0866 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 22:46:04.2102 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 22:46:04.2475 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1374.1883ms | 
+2025-03-04 22:46:04.2475 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 159.1689ms | 
+2025-03-04 22:46:04.2605 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 189.7995ms | 
+2025-03-04 22:46:04.3998 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 189.6535ms | 
+2025-03-04 22:46:04.6169 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 22:46:04.6338 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.8687ms | 
+2025-03-04 22:46:13.6323 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/all - - | 
+2025-03-04 22:46:13.6581 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' | 
+2025-03-04 22:46:13.6842 | INFO | Route matched with {action = "GetAllGreetings", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllGreetings() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 22:46:14.0243 | INFO | API: Fetching all greetings. | 
+2025-03-04 22:46:14.0243 | INFO | BL: Fetching all greetings. | 
+2025-03-04 22:46:14.0404 | INFO | Fetching all greetings from the database. | 
+2025-03-04 22:46:14.8503 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-04 22:46:16.8743 | INFO | Executed DbCommand (125ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [g].[Id], [g].[GreetingMessage] AS [Message]
+FROM [Greetings] AS [g] | 
+2025-03-04 22:46:16.9562 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.List`1[[ModelLayer.Model.GreetingModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 22:46:16.9785 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 3284.5035ms | 
+2025-03-04 22:46:16.9785 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' | 
+2025-03-04 22:46:17.0010 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/all - - - 200 - application/json;+charset=utf-8 3362.8537ms | 

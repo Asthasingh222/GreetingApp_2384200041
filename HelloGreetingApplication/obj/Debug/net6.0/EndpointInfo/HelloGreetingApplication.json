@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/HelloGreeting/all": {
+      "get": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/HelloGreeting/{id}": {
       "get": {
         "tags": [
