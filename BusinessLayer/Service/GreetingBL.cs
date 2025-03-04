@@ -53,5 +53,19 @@ namespace BusinessLayer.Service
             return greetingRL.GetAllGreetings();
         }
 
+        //UC7 : Updates an existing greeting message.
+        public bool UpdateGreeting(int id, GreetingModel greeting)
+        {
+            if (greeting == null || string.IsNullOrEmpty(greeting.Message))
+            {
+                logger.LogError("BL: Invalid greeting data for update.");
+                return false; // Return false instead of throwing an exception
+            }
+
+            logger.LogInformation("BL: Updating greeting with ID: {Id}", id);
+            return greetingRL.UpdateGreeting(id, greeting);
+        }
+
+
     }
 }

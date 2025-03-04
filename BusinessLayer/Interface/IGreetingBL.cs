@@ -20,5 +20,8 @@ namespace BusinessLayer.Interface
 
         //UC6
         List<GreetingModel> GetAllGreetings();
+
+        //UC7
+        bool UpdateGreeting(int id, GreetingModel greeting);
     }
 }
