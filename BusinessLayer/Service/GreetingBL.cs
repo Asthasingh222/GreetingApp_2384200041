@@ -46,5 +46,12 @@ namespace BusinessLayer.Service
             return greetingRL.GetGreetingById(id);
         }
 
+        //UC6 : Fetches all greeting messages from the database
+        public List<GreetingModel> GetAllGreetings()
+        {
+            logger.LogInformation("BL: Fetching all greetings.");
+            return greetingRL.GetAllGreetings();
+        }
+
     }
 }

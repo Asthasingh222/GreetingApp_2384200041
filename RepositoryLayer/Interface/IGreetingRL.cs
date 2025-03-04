@@ -11,6 +11,7 @@ namespace RepositoryLayer.Interface
     public interface IGreetingRL
     {
         void SaveGreeting(GreetingModel greeting);//UC4
-        GreetingModel GetGreetingById(int id);
+        GreetingModel GetGreetingById(int id);//UC5
+        List<GreetingModel> GetAllGreetings(); //UC6
     }
 }
