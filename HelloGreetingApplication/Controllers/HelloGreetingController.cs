@@ -62,6 +62,31 @@ namespace HelloGreetingApplication.Controllers
                 data = message
             });
         }
+
+        /// <summary>
+        /// Get method to generate greeting message based on attributes provided
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns></returns>
+        [HttpGet("greet")]
+        public IActionResult GetGreeting(string? firstName,string? lastName)
+        {
+            string message = "Hello";
+
+            if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
+                message += $", {firstName} {lastName}!";
+            else if (!string.IsNullOrEmpty(firstName))
+                message += $", {firstName}!";
+            else if (!string.IsNullOrEmpty(lastName))
+                message += $", Mr./Ms. {lastName}!";
+            else
+                message += ", World!";
+
+            return Ok(new { success = true, message = "Greeting message generated", data = message });
+        }
+
+
         /// <summary>
         /// Post method to add a key-Value pair
         /// </summary>
