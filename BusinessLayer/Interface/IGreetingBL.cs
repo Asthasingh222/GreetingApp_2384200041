@@ -9,10 +9,13 @@ namespace BusinessLayer.Interface
 {
     public interface IGreetingBL
     {
-    //UC2
-    string HelloGreeting();
+        //UC2
+        string HelloGreeting();
 
-    //UC4
-    void SaveGreeting(GreetingModel greeting);
+        //UC4
+        void SaveGreeting(GreetingModel greeting);
+
+        //UC5
+        GreetingModel GetGreetingById(int id);
     }
 }

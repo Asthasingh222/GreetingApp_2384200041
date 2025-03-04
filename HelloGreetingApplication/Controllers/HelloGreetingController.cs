@@ -31,6 +31,29 @@ namespace HelloGreetingApplication.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Retrieves a greeting message by ID.
+        /// </summary>
+        [HttpGet("{id}")]
+        public IActionResult GetGreetingById(int id)
+        {
+            _logger.LogInformation("API: Received request to fetch greeting with ID: {Id}", id);
+            var greeting = greetingBL.GetGreetingById(id);
+
+            if (greeting == null)
+            {
+                _logger.LogWarning("API: Greeting with ID {Id} not found.", id);
+                return NotFound(new { message = "Greeting not found" });
+            }
+
+            return Ok(new ResponseModel<GreetingModel>
+            {
+                success = true,
+                message = "Greeting retrieved successfully",
+                data = greeting
+            });
+        }
+
         [HttpPost("save")]
         public IActionResult SaveGreeting([FromBody] GreetingModel greetingModel)
         {
