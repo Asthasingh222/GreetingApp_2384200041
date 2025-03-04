@@ -277,3 +277,266 @@
 2025-03-04 12:06:47.2160 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication) in 20.5985ms | 
 2025-03-04 12:06:47.2160 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' | 
 2025-03-04 12:06:47.2160 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/greet?lastName=Jadon - - - 200 - application/json;+charset=utf-8 26.0155ms | 
+2025-03-04 12:36:07.8063 | INFO | Application is starting... | 
+2025-03-04 12:36:09.6894 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 12:36:09.6894 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 12:36:09.8180 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 12:36:09.8335 | INFO | Hosting environment: Development | 
+2025-03-04 12:36:09.8364 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 12:36:11.2148 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 12:36:11.8560 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 643.4706ms | 
+2025-03-04 12:36:11.9862 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 12:36:11.9998 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 12:36:11.9998 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 12:36:11.9998 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.0362ms | 
+2025-03-04 12:36:12.1654 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 179.2297ms | 
+2025-03-04 12:36:12.2491 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 249.3250ms | 
+2025-03-04 12:36:12.3091 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 12:36:12.3221 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 12.9107ms | 
+2025-03-04 12:36:27.0780 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 | 
+2025-03-04 12:36:27.1052 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-04 12:36:27.1687 | INFO | Route matched with {action = "Post", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 12:36:27.2297 | INFO | New record added: ID=4, Key=string, Value=string | 
+2025-03-04 12:36:27.2297 | INFO | Executing CreatedResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 12:36:27.2496 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication) in 72.8756ms | 
+2025-03-04 12:36:27.2496 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-04 12:36:27.2496 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 - 201 - application/json;+charset=utf-8 167.2305ms | 
+2025-03-04 13:52:51.2752 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting - - | 
+2025-03-04 13:52:51.2885 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:52:51.2885 | INFO | Route matched with {action = "Get", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:52:51.2885 | INFO | GET request received to fetch all records. | 
+2025-03-04 13:52:51.2885 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.RequestModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:52:51.2885 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication) in 8.6486ms | 
+2025-03-04 13:52:51.2885 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:52:51.2885 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting - - - 200 - application/json;+charset=utf-8 28.1915ms | 
+2025-03-04 13:53:13.2634 | INFO | Request starting HTTP/2 DELETE https://localhost:7084/HelloGreeting/2 - - | 
+2025-03-04 13:53:13.2777 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication)' | 
+2025-03-04 13:53:13.2777 | INFO | Route matched with {action = "Delete", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:53:13.2899 | INFO | Record deleted: ID=2 | 
+2025-03-04 13:53:13.2899 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:53:13.2899 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication) in 9.9268ms | 
+2025-03-04 13:53:13.2899 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication)' | 
+2025-03-04 13:53:13.2899 | INFO | Request finished HTTP/2 DELETE https://localhost:7084/HelloGreeting/2 - - - 200 - application/json;+charset=utf-8 28.0938ms | 
+2025-03-04 13:53:27.4632 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting - - | 
+2025-03-04 13:53:27.4632 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:53:27.4766 | INFO | Route matched with {action = "Get", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:53:27.4766 | INFO | GET request received to fetch all records. | 
+2025-03-04 13:53:27.4766 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.RequestModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:53:27.4766 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication) in 1.5788ms | 
+2025-03-04 13:53:27.4766 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:53:27.4766 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting - - - 200 - application/json;+charset=utf-8 7.7589ms | 
+2025-03-04 13:53:43.6586 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 | 
+2025-03-04 13:53:43.6699 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-04 13:53:43.6699 | INFO | Route matched with {action = "Post", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:53:43.6699 | INFO | New record added: ID=5, Key=string, Value=string | 
+2025-03-04 13:53:43.6699 | INFO | Executing CreatedResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:53:43.6699 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication) in 4.1305ms | 
+2025-03-04 13:53:43.6699 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-04 13:53:43.6699 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 - 201 - application/json;+charset=utf-8 15.8523ms | 
+2025-03-04 13:54:28.9307 | INFO | Request starting HTTP/2 PATCH https://localhost:7084/HelloGreeting/2 application/json 27 | 
+2025-03-04 13:54:28.9463 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:54:28.9463 | INFO | Route matched with {action = "Patch", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Patch(Int32, ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:54:28.9463 | WARN | PATCH request failed. Record with ID=2 not found. | 
+2025-03-04 13:54:28.9463 | INFO | Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:54:28.9611 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication) in 7.7447ms | 
+2025-03-04 13:54:28.9611 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:54:28.9611 | INFO | Request finished HTTP/2 PATCH https://localhost:7084/HelloGreeting/2 application/json 27 - 404 - application/json;+charset=utf-8 24.2646ms | 
+2025-03-04 13:54:46.7777 | INFO | Request starting HTTP/2 PATCH https://localhost:7084/HelloGreeting/2 application/json 26 | 
+2025-03-04 13:54:46.7777 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:54:46.7777 | INFO | Route matched with {action = "Patch", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Patch(Int32, ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:54:46.7885 | WARN | PATCH request failed. Record with ID=2 not found. | 
+2025-03-04 13:54:46.7885 | INFO | Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:54:46.7885 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication) in 3.6682ms | 
+2025-03-04 13:54:46.7885 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:54:46.7885 | INFO | Request finished HTTP/2 PATCH https://localhost:7084/HelloGreeting/2 application/json 26 - 404 - application/json;+charset=utf-8 14.0838ms | 
+2025-03-04 13:55:18.4972 | INFO | Request starting HTTP/2 PATCH https://localhost:7084/HelloGreeting/3 application/json 30 | 
+2025-03-04 13:55:18.5077 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:55:18.5077 | INFO | Route matched with {action = "Patch", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Patch(Int32, ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:55:18.5077 | INFO | Record patched: ID=3, Key=Welcome, Value=new string | 
+2025-03-04 13:55:18.5077 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:55:18.5077 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication) in 3.3467ms | 
+2025-03-04 13:55:18.5077 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Patch (HelloGreetingApplication)' | 
+2025-03-04 13:55:18.5077 | INFO | Request finished HTTP/2 PATCH https://localhost:7084/HelloGreeting/3 application/json 30 - 200 - application/json;+charset=utf-8 15.0599ms | 
+2025-03-04 13:55:42.2901 | INFO | Request starting HTTP/2 PUT https://localhost:7084/HelloGreeting/3 application/json 27 | 
+2025-03-04 13:55:42.2901 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication)' | 
+2025-03-04 13:55:42.2901 | INFO | Route matched with {action = "Put", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Put(Int32, ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:55:42.2901 | INFO | Record updated: ID=3, Key=, Value=string5 | 
+2025-03-04 13:55:42.3068 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:55:42.3068 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication) in 12.9095ms | 
+2025-03-04 13:55:42.3068 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Put (HelloGreetingApplication)' | 
+2025-03-04 13:55:42.3068 | INFO | Request finished HTTP/2 PUT https://localhost:7084/HelloGreeting/3 application/json 27 - 200 - application/json;+charset=utf-8 18.5680ms | 
+2025-03-04 13:56:01.9050 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting - - | 
+2025-03-04 13:56:01.9159 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:56:01.9159 | INFO | Route matched with {action = "Get", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 13:56:01.9159 | INFO | GET request received to fetch all records. | 
+2025-03-04 13:56:01.9159 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.RequestModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 13:56:01.9304 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication) in 11.8571ms | 
+2025-03-04 13:56:01.9304 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Get (HelloGreetingApplication)' | 
+2025-03-04 13:56:01.9304 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting - - - 200 - application/json;+charset=utf-8 25.9636ms | 
+2025-03-04 15:32:37.5538 | INFO | Application is starting... | 
+2025-03-04 15:32:37.7780 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:33:04.3244 | INFO | Application is starting... | 
+2025-03-04 15:33:04.4684 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:33:58.0328 | INFO | Application is starting... | 
+2025-03-04 15:33:58.1469 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:34:25.5883 | INFO | Application is starting... | 
+2025-03-04 15:34:25.7167 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:34:42.4509 | INFO | Application is starting... | 
+2025-03-04 15:34:42.5923 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:35:09.6016 | INFO | Application is starting... | 
+2025-03-04 15:35:09.8062 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:37:00.7751 | INFO | Application is starting... | 
+2025-03-04 15:37:00.9715 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:37:39.4411 | INFO | Application is starting... | 
+2025-03-04 15:37:39.6286 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:48:02.3631 | INFO | Application is starting... | 
+2025-03-04 15:48:02.5571 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 15:55:09.1706 | INFO | Application is starting... | 
+2025-03-04 15:55:09.3626 | ERROR | Application encountered a critical error and is shutting down. | Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\Program.cs:line 30
+2025-03-04 16:16:21.3381 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 16:16:21.3682 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 16:16:21.4562 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 16:16:21.4562 | INFO | Hosting environment: Development | 
+2025-03-04 16:16:21.4562 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 16:16:23.4954 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 16:16:24.4719 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 978.2564ms | 
+2025-03-04 16:16:24.5876 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 16:16:24.5876 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 16:16:24.5876 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 16:16:24.6042 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 12.9524ms | 
+2025-03-04 16:16:24.6042 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 19.2377ms | 
+2025-03-04 16:16:24.8065 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 207.4536ms | 
+2025-03-04 16:16:24.9716 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 16:16:24.9871 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.4151ms | 
+2025-03-04 16:16:45.5707 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/greet - - | 
+2025-03-04 16:16:45.6037 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' | 
+2025-03-04 16:16:45.6402 | INFO | Route matched with {action = "GetGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreeting(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 16:16:45.6809 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 16:16:45.6949 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication) in 47.4438ms | 
+2025-03-04 16:16:45.6949 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' | 
+2025-03-04 16:16:45.6949 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/greet - - - 200 - application/json;+charset=utf-8 124.8583ms | 
+2025-03-04 16:16:59.7147 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/greeting - - | 
+2025-03-04 16:16:59.7147 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' | 
+2025-03-04 16:16:59.7147 | INFO | Route matched with {action = "GetGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreeting() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 16:16:59.7147 | INFO | Fetching greeting message. | 
+2025-03-04 16:16:59.7271 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-04 16:16:59.7271 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication) in 4.474ms | 
+2025-03-04 16:16:59.7271 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' | 
+2025-03-04 16:16:59.7271 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/greeting - - - 200 - application/json;+charset=utf-8 13.8655ms | 
+2025-03-04 17:06:01.3091 | INFO | Application is starting... | 
+2025-03-04 17:06:02.8122 | ERROR | Application encountered a critical error and is shutting down. | System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: BusinessLayer.Interface.IGreetingBL Lifetime: Scoped ImplementationType: BusinessLayer.Service.GreetingBL': Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+2025-03-04 17:16:45.8922 | INFO | Application is starting... | 
+2025-03-04 17:16:47.3656 | ERROR | Application encountered a critical error and is shutting down. | System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: BusinessLayer.Interface.IGreetingBL Lifetime: Scoped ImplementationType: BusinessLayer.Service.GreetingBL': Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+2025-03-04 20:03:53.7705 | INFO | Application is starting... | 
+2025-03-04 20:03:55.3425 | ERROR | Application encountered a critical error and is shutting down. | System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: BusinessLayer.Interface.IGreetingBL Lifetime: Scoped ImplementationType: BusinessLayer.Service.GreetingBL': Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'RepositoryLayer.Interface.IGreetingRL' while attempting to activate 'BusinessLayer.Service.GreetingBL'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+2025-03-04 20:05:40.6587 | INFO | Application is starting... | 
+2025-03-04 20:05:41.3933 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-04 20:05:41.3933 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-04 20:05:41.4422 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-04 20:05:41.4422 | INFO | Hosting environment: Development | 
+2025-03-04 20:05:41.4422 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-04 20:05:42.3909 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-04 20:05:42.8407 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 449.2517ms | 
+2025-03-04 20:05:43.0157 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-04 20:05:43.0202 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-04 20:05:43.0202 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-04 20:05:43.0413 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 25.3571ms | 
+2025-03-04 20:05:43.1638 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 143.8501ms | 
+2025-03-04 20:05:43.2777 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 253.1961ms | 
+2025-03-04 20:05:43.3611 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-04 20:05:43.3611 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 9.2339ms | 
+2025-03-04 20:06:02.9557 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/save application/json 38 | 
+2025-03-04 20:06:02.9703 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-04 20:06:03.0044 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-04 20:06:03.3049 | INFO | Saving Greeting: Message1 | 
+2025-03-04 20:06:03.3049 | INFO | Saving new greeting to the database. | 
+2025-03-04 20:06:03.9899 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-04 20:06:04.8771 | INFO | Executed DbCommand (183ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([GreetingMessage])
+VALUES (@p0);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); | 
+2025-03-04 20:06:04.9443 | INFO | Greeting saved successfully. | 
+2025-03-04 20:06:04.9703 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-04 20:06:04.9703 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 1964.7311ms | 
+2025-03-04 20:06:04.9703 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-04 20:06:05.0309 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/save application/json 38 - 200 - text/plain;+charset=utf-8 2075.1533ms | 

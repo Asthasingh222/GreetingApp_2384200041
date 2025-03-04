@@ -14,3 +14,5 @@ C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\n
 C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
 C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll
 C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\NLog.config
+C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.runtimeconfig.json
+C:\Users\astha\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.genruntimeconfig.cache
