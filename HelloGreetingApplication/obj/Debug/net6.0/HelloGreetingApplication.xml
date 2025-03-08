@@ -9,6 +9,13 @@
             Provides API for HelloGreetingApp
             </summary>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException">
+            <summary>
+            This is test Exception API
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting(System.Int32)">
             <summary>
             Delete method to delete a greeting message.

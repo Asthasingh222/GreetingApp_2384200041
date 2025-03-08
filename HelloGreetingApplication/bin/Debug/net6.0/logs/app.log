@@ -924,3 +924,235 @@ SELECT @@ROWCOUNT; |
 2025-03-05 00:20:00.2231 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 19.4133ms | 
 2025-03-05 00:20:00.2231 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
 2025-03-05 00:20:00.2231 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 26.2561ms | 
+2025-03-05 11:02:16.2231 | INFO | Application is starting... | 
+2025-03-05 11:02:18.3746 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 11:02:18.3775 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 11:02:18.5694 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 11:02:18.5694 | INFO | Hosting environment: Development | 
+2025-03-05 11:02:18.5694 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 11:02:19.5454 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger - - | 
+2025-03-05 11:02:20.0546 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger - - - 301 0 - 504.5257ms | 
+2025-03-05 11:02:20.1118 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-05 11:02:20.3649 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 255.6209ms | 
+2025-03-05 11:02:20.3904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-05 11:02:20.3904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-05 11:02:20.3904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-05 11:02:20.3904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-05 11:02:20.3904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-05 11:02:20.4097 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 17.5597ms | 
+2025-03-05 11:02:20.4097 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-05 11:02:20.4097 | INFO | Sending file. Request path: '/index.css'. Physical path: 'N/A' | 
+2025-03-05 11:02:20.4534 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-05 11:02:20.4952 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 200 202 text/css 103.7596ms | 
+2025-03-05 11:02:20.4952 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 85.4741ms | 
+2025-03-05 11:02:20.5360 | INFO | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' | 
+2025-03-05 11:02:20.5360 | INFO | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' | 
+2025-03-05 11:02:20.5507 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 200 229223 application/javascript 158.6224ms | 
+2025-03-05 11:02:20.5507 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 200 154948 text/css 160.8255ms | 
+2025-03-05 11:02:20.6217 | INFO | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' | 
+2025-03-05 11:02:20.6256 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 200 1466324 application/javascript 233.6332ms | 
+2025-03-05 11:02:20.8936 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 440.1131ms | 
+2025-03-05 11:02:20.9904 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-05 11:02:21.0919 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 101.4715ms | 
+2025-03-05 11:07:26.6610 | INFO | Application is starting... | 
+2025-03-05 11:07:28.2023 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-05 11:07:28.2023 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-05 11:07:28.2982 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-05 11:07:28.3191 | INFO | Hosting environment: Development | 
+2025-03-05 11:07:28.3292 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-05 11:07:29.2060 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-05 11:07:29.6155 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 412.3906ms | 
+2025-03-05 11:07:29.6703 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-05 11:07:29.6703 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-05 11:07:29.6703 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-05 11:07:29.6812 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 10.7906ms | 
+2025-03-05 11:07:29.7093 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 38.8921ms | 
+2025-03-05 11:07:29.8059 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 135.3789ms | 
+2025-03-05 11:07:29.9402 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-05 11:07:29.9725 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 32.3281ms | 
+2025-03-08 11:00:44.9625 | INFO | Application is starting... | 
+2025-03-08 11:00:47.4078 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:00:47.4078 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:00:47.6211 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:00:47.6211 | INFO | Hosting environment: Development | 
+2025-03-08 11:00:47.6211 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:00:49.2222 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:00:49.6748 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 456.8435ms | 
+2025-03-08 11:00:49.7119 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-08 11:00:49.7124 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.3075ms | 
+2025-03-08 11:00:49.7124 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 9.0268ms | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-08 11:00:49.7124 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:00:49.7293 | INFO | The file /swagger-ui-bundle.js was not modified | 
+2025-03-08 11:00:49.7293 | INFO | The file /swagger-ui-standalone-preset.js was not modified | 
+2025-03-08 11:00:49.7293 | INFO | The file /swagger-ui.css was not modified | 
+2025-03-08 11:00:49.7449 | INFO | The file /index.css was not modified | 
+2025-03-08 11:00:49.7449 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 36.6189ms | 
+2025-03-08 11:00:49.7449 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 304 - text/css 46.8472ms | 
+2025-03-08 11:00:49.7449 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 304 - text/css 46.9564ms | 
+2025-03-08 11:00:49.7617 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 304 - application/javascript 49.1801ms | 
+2025-03-08 11:00:49.9147 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 191.7408ms | 
+2025-03-08 11:00:50.1510 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:00:50.1780 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.1132ms | 
+2025-03-08 11:03:34.5699 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:03:34.5741 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:03:34.6169 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:16:05.9343 | INFO | Application is starting... | 
+2025-03-08 11:16:07.6751 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:16:07.6823 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:16:08.3318 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:16:08.3442 | INFO | Hosting environment: Development | 
+2025-03-08 11:16:08.3563 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:16:09.1248 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:16:09.5116 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 397.2237ms | 
+2025-03-08 11:16:09.5771 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:16:09.5771 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:16:09.5771 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:16:09.5877 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.5073ms | 
+2025-03-08 11:16:09.5877 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 13.1817ms | 
+2025-03-08 11:16:09.6592 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.8317ms | 
+2025-03-08 11:16:09.8038 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:16:09.8207 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.0410ms | 
+2025-03-08 11:16:15.5505 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:16:15.5615 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:16:15.6078 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:18:18.3529 | INFO | Application is starting... | 
+2025-03-08 11:18:19.7781 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:18:19.7781 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:18:20.4538 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:18:20.4538 | INFO | Hosting environment: Development | 
+2025-03-08 11:18:20.4538 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:18:21.1468 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:18:21.5285 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 392.4394ms | 
+2025-03-08 11:18:21.6654 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:18:21.6654 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:18:21.6661 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:18:21.6661 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.4007ms | 
+2025-03-08 11:18:21.6661 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 10.5676ms | 
+2025-03-08 11:18:21.7316 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.4293ms | 
+2025-03-08 11:18:21.9173 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:18:21.9325 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.2388ms | 
+2025-03-08 11:18:27.5320 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:18:27.5588 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:18:27.5934 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:20:51.6323 | INFO | Application is starting... | 
+2025-03-08 11:20:52.9172 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:20:52.9172 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:20:53.1341 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:20:53.1657 | INFO | Hosting environment: Development | 
+2025-03-08 11:20:53.1657 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:20:54.0868 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:20:54.9912 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 908.4887ms | 
+2025-03-08 11:20:55.0246 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:20:55.0265 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:20:55.0265 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:20:55.0265 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.4307ms | 
+2025-03-08 11:20:55.0265 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 15.8094ms | 
+2025-03-08 11:20:55.1121 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.8503ms | 
+2025-03-08 11:20:55.2383 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:20:55.2584 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.0165ms | 
+2025-03-08 11:21:04.1815 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:21:04.1977 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:21:04.2176 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:25:13.1677 | INFO | Application is starting... | 
+2025-03-08 11:25:15.0828 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:25:15.0828 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:25:15.2573 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:25:15.2573 | INFO | Hosting environment: Development | 
+2025-03-08 11:25:15.2592 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:25:16.3314 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:25:16.7037 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 376.9612ms | 
+2025-03-08 11:25:16.7653 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:25:16.7653 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:25:16.7913 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:25:16.8071 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 45.3379ms | 
+2025-03-08 11:25:16.8071 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 22.0405ms | 
+2025-03-08 11:25:16.9043 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 139.0284ms | 
+2025-03-08 11:25:17.0644 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:25:17.0936 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 29.1752ms | 
+2025-03-08 11:25:44.5407 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/test-exception - - | 
+2025-03-08 11:25:44.5611 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.TestException (HelloGreetingApplication)' | 
+2025-03-08 11:25:44.6173 | INFO | Route matched with {action = "TestException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TestException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:25:44.9792 | ERROR | GlobalExceptionFilter caught: Test from another endpoint | 
+2025-03-08 11:25:44.9792 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:25:44.9966 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.TestException (HelloGreetingApplication) in 373.8324ms | 
+2025-03-08 11:25:44.9966 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.TestException (HelloGreetingApplication)' | 
+2025-03-08 11:25:44.9966 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/test-exception - - - 500 - application/json;+charset=utf-8 455.9173ms | 
+2025-03-08 11:26:02.2171 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:26:02.2171 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:26:02.2171 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:26:02.2937 | ERROR | GlobalExceptionFilter caught: This is a test exception | 
+2025-03-08 11:26:02.2937 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:26:02.2937 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication) in 71.0827ms | 
+2025-03-08 11:26:02.2937 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:26:02.2937 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - - 500 - application/json;+charset=utf-8 77.8519ms | 
+2025-03-08 11:39:42.5081 | INFO | Application is starting... | 
+2025-03-08 11:40:37.4898 | INFO | Application is starting... | 
+2025-03-08 11:41:28.9175 | INFO | Application is starting... | 
+2025-03-08 11:41:32.2051 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:41:32.2279 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:41:33.2114 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:41:33.2238 | INFO | Hosting environment: Development | 
+2025-03-08 11:41:33.3259 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:41:33.7915 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:41:34.9956 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1209.6937ms | 
+2025-03-08 11:41:35.0887 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:41:35.0887 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:41:35.0887 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:41:35.0887 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 14.3239ms | 
+2025-03-08 11:41:35.1312 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 41.9486ms | 
+2025-03-08 11:41:35.3550 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 264.7226ms | 
+2025-03-08 11:41:35.5578 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:41:35.5767 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.9136ms | 
+2025-03-08 11:41:42.5116 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:41:42.5429 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:41:42.5868 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:41:43.2511 | ERROR | GlobalExceptionFilter caught: This is a test exception | 
+2025-03-08 11:41:43.2601 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:41:43.2786 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication) in 683.133ms | 
+2025-03-08 11:41:43.2786 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:41:43.2786 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - - 500 - application/json;+charset=utf-8 763.4466ms | 
+2025-03-08 11:41:49.6811 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/business-exception - - | 
+2025-03-08 11:41:49.6811 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.TriggerBusinessException (HelloGreetingApplication)' | 
+2025-03-08 11:41:49.6811 | INFO | Route matched with {action = "TriggerBusinessException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TriggerBusinessException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:41:49.8868 | ERROR | GlobalExceptionFilter caught: Business Layer Exception | 
+2025-03-08 11:41:49.8868 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:41:49.8868 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.TriggerBusinessException (HelloGreetingApplication) in 192.056ms | 
+2025-03-08 11:41:49.8868 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.TriggerBusinessException (HelloGreetingApplication)' | 
+2025-03-08 11:41:49.8868 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/business-exception - - - 500 - application/json;+charset=utf-8 200.1048ms | 
+2025-03-08 11:47:03.0920 | INFO | Application is starting... | 
+2025-03-08 11:47:05.7288 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 11:47:05.7533 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 11:47:06.0972 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 11:47:06.0972 | INFO | Hosting environment: Development | 
+2025-03-08 11:47:06.0972 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 11:47:07.1669 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 11:47:07.8954 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 731.4381ms | 
+2025-03-08 11:47:07.9951 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 11:47:07.9951 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 11:47:08.0564 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 61.1870ms | 
+2025-03-08 11:47:08.1787 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 11:47:08.2306 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 51.8710ms | 
+2025-03-08 11:47:08.3723 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 377.1830ms | 
+2025-03-08 11:47:08.4930 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 11:47:08.5101 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.0561ms | 
+2025-03-08 11:47:26.5462 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 11:47:26.5562 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:47:26.5989 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:47:27.2184 | ERROR | GlobalExceptionFilter caught: This is a test exception | 
+2025-03-08 11:47:27.2315 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:47:27.2639 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication) in 656.0335ms | 
+2025-03-08 11:47:27.2639 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 11:47:27.2755 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - - 500 - application/json;+charset=utf-8 728.1580ms | 
+2025-03-08 11:47:56.3124 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 | 
+2025-03-08 11:47:56.3242 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-08 11:47:56.3493 | INFO | Route matched with {action = "Post", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 11:47:56.4526 | INFO | New record added: ID=4, Key=string, Value=string | 
+2025-03-08 11:47:56.4526 | INFO | Executing CreatedResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 11:47:56.4526 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication) in 110.9866ms | 
+2025-03-08 11:47:56.4526 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
+2025-03-08 11:47:56.4624 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 - 201 - application/json;+charset=utf-8 145.1968ms | 
