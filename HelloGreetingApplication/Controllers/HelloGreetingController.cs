@@ -32,6 +32,17 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
+        /// This is test Exception API
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        [HttpGet("exception")]
+        public IActionResult ThrowException()
+        {
+            throw new Exception("This is a test exception");
+        }
+
+        /// <summary>
         /// Delete method to delete a greeting message.
         /// </summary>
         /// <param name="id"></param>
@@ -86,7 +97,7 @@ namespace HelloGreetingApplication.Controllers
         /// Post method to Retrieve all greeting messages.
         /// </summary>
         /// <returns>response model</returns>
-        [HttpGet("all")]
+        [HttpGet("retrieveGreeting/all")]
         public IActionResult GetAllGreetings()
         {
             _logger.LogInformation("API: Fetching all greetings.");
@@ -104,7 +115,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>response model</returns>
-        [HttpGet("{id}")]
+        [HttpGet("retrieveGreetingById/{id}")]
         public IActionResult GetGreetingById(int id)
         {
             _logger.LogInformation("API: Received request to fetch greeting with ID: {Id}", id);
@@ -129,7 +140,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="greetingModel"></param>
         /// <returns>string</returns>
-        [HttpPost("save")]
+        [HttpPost("greeting/save")]
         public IActionResult SaveGreeting(GreetingModel greetingModel)
         {
             try
