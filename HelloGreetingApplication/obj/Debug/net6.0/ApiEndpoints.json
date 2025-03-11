@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.UserController",
+    "Method": "ProtectedEndpoint",
+    "RelativePath": "api/user/protected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "api/user/register",
     "HttpMethod": "POST",

@@ -108,7 +108,7 @@
         </member>
         <member name="M:HelloGreetingApplication.Controllers.UserController.Login(ModelLayer.Model.UserDTO)">
             <summary>
-            Method to Login User
+            Method to Login User and return JWT Token
             </summary>
         </member>
     </members>

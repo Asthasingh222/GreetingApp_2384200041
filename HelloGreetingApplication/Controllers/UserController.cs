@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using BusinessLayer.Interface;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -38,25 +39,35 @@ namespace HelloGreetingApplication.Controllers
             _logger.LogWarning("User {Username} registration failed: {Result}", user.Username, result);
             throw new Exception("User registration failed. Username or Email already exists.");
         }
-
         /// <summary>
-        /// Method to Login User
+        /// Method to Login User and return JWT Token
         /// </summary>
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserDTO loginRequest)
         {
             _logger.LogInformation("Login attempt for Username: {Username}", loginRequest.Username);
 
-            var user = _userService.Login(loginRequest.Username!, loginRequest.Password!);
+            string token = _userService.Login(loginRequest.Username!, loginRequest.Password!);
 
-            if (user == null)
+            if (string.IsNullOrEmpty(token))
             {
                 _logger.LogWarning("Login failed for Username: {Username}. Invalid credentials.", loginRequest.Username);
                 throw new UnauthorizedAccessException("Invalid username or password.");
             }
 
             _logger.LogInformation("Login successful for Username: {Username}", loginRequest.Username);
-            return Ok(new { message = "Login successful", user });
+            return Ok(new { message = "Login successful", token });
         }
+
+        /// <summary>
+        /// Protected method which require JWT authentication
+        /// </summary>
+        [Authorize]
+        [HttpGet("protected")]
+        public IActionResult ProtectedEndpoint()
+        {
+            return Ok(new { message = "You have accessed a protected resource!" });
+        }
+
     }
 }

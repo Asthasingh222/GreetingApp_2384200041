@@ -10,6 +10,6 @@ namespace BusinessLayer.Interface
     public interface IUserBL
     {
         string Register(UserDTO user); //UC10
-        UserDTO? Login(string username, string password); //UC10
+        string Login(string username, string password); //UC10
     }
 }

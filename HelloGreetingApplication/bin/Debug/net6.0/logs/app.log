@@ -1793,3 +1793,355 @@ WHERE [u].[Username] = @__username_0 |
 2025-03-11 13:50:04.5699 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 75.2017ms | 
 2025-03-11 13:50:04.5699 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
 2025-03-11 13:50:04.5699 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 200 - application/json;+charset=utf-8 90.6224ms | 
+2025-03-11 17:59:22.0624 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 17:59:22.5867 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 17:59:22.5867 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 17:59:22.8842 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 17:59:22.8842 | INFO | Hosting environment: Development | 
+2025-03-11 17:59:22.8842 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 17:59:24.9104 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 17:59:26.2644 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 17:59:26.2720 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1301.2256ms | 
+2025-03-11 17:59:26.3076 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 17:59:26.3299 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 17:59:26.3508 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 86.3385ms | 
+2025-03-11 17:59:26.3508 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 22.3939ms | 
+2025-03-11 17:59:26.6154 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 307.7796ms | 
+2025-03-11 17:59:26.7361 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 17:59:28.2130 | ERROR | An unhandled exception has occurred while executing the request. | Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/user/login" for actions - HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication), HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-11 17:59:28.2297 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 1493.5502ms | 
+2025-03-11 18:00:10.9962 | INFO | Application is starting... | 
+2025-03-11 18:00:15.1559 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 18:00:16.0572 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 18:00:16.0572 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 18:00:16.5000 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 18:00:16.5201 | INFO | Hosting environment: Development | 
+2025-03-11 18:00:16.5201 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 18:00:18.8090 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 18:00:19.8378 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1034.3147ms | 
+2025-03-11 18:00:19.9459 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 18:00:19.9459 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 18:00:19.9459 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 18:00:19.9606 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 14.6940ms | 
+2025-03-11 18:00:19.9824 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 34.8206ms | 
+2025-03-11 18:00:20.2072 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 257.8339ms | 
+2025-03-11 18:00:20.3692 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 18:00:20.3914 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.2024ms | 
+2025-03-11 18:00:45.8705 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 94 | 
+2025-03-11 18:00:46.0599 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 18:00:46.1061 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:00:46.4279 | INFO | Register method called for Username: john_doe | 
+2025-03-11 18:00:46.4279 | INFO | Registration attempt for Username: john_doe | 
+2025-03-11 18:00:47.1327 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:00:48.3171 | INFO | Executed DbCommand (179ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 18:00:48.3840 | INFO | Executed DbCommand (12ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 18:00:48.3840 | INFO | Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 18:00:48.5784 | INFO | Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-11 18:00:48.6064 | INFO | User john_doe registered successfully. | 
+2025-03-11 18:00:48.6064 | INFO | User john_doe registered successfully. | 
+2025-03-11 18:00:48.6064 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:00:48.6224 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2511.1349ms | 
+2025-03-11 18:00:48.6224 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 18:00:48.6314 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 94 - 200 - application/json;+charset=utf-8 2756.4216ms | 
+2025-03-11 18:01:13.1716 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 72 | 
+2025-03-11 18:01:13.1774 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:13.2078 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:01:13.2088 | INFO | Login attempt for Username: string3 | 
+2025-03-11 18:01:13.2088 | INFO | BL: User 'string3' attempting to log in | 
+2025-03-11 18:01:13.2088 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:01:13.2870 | INFO | Executed DbCommand (17ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:01:13.2870 | WARN | BL: Login failed for user string3 | 
+2025-03-11 18:01:13.3972 | ERROR | GlobalExceptionFilter caught: Invalid username or password. | 
+2025-03-11 18:01:13.3972 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:01:13.3972 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 191.0879ms | 
+2025-03-11 18:01:13.3972 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:13.3972 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 72 - 500 - application/json;+charset=utf-8 227.4749ms | 
+2025-03-11 18:01:20.1546 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 18:01:20.1546 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:20.1546 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:01:20.1614 | INFO | Login attempt for Username: string | 
+2025-03-11 18:01:20.1614 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 18:01:20.2144 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:01:20.2558 | INFO | Executed DbCommand (37ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:01:20.3878 | ERROR | GlobalExceptionFilter caught: The type initializer for 'System.IdentityModel.Tokens.Jwt.JsonExtensions' threw an exception. | 
+2025-03-11 18:01:20.3878 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:01:20.3878 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 227.2434ms | 
+2025-03-11 18:01:20.3878 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:20.3878 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 500 - application/json;+charset=utf-8 235.8453ms | 
+2025-03-11 18:01:45.6720 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 63 | 
+2025-03-11 18:01:45.6772 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:45.6772 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:01:45.6772 | INFO | Login attempt for Username: john_doe | 
+2025-03-11 18:01:45.6772 | INFO | BL: User 'john_doe' attempting to log in | 
+2025-03-11 18:01:45.6772 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:01:45.6931 | INFO | Executed DbCommand (15ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:01:45.8226 | ERROR | GlobalExceptionFilter caught: The type initializer for 'System.IdentityModel.Tokens.Jwt.JsonExtensions' threw an exception. | 
+2025-03-11 18:01:45.8226 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:01:45.8226 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 145.187ms | 
+2025-03-11 18:01:45.8226 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:01:45.8226 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 63 - 500 - application/json;+charset=utf-8 150.8519ms | 
+2025-03-11 18:05:05.4309 | INFO | Application is starting... | 
+2025-03-11 18:05:08.9304 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 18:05:09.6130 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 18:05:09.6130 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 18:05:09.9636 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 18:05:10.0442 | INFO | Hosting environment: Development | 
+2025-03-11 18:05:10.1174 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 18:05:11.5040 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 18:05:12.4668 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 966.3870ms | 
+2025-03-11 18:05:12.5853 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 18:05:12.5853 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 18:05:12.5853 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 18:05:12.5993 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 12.7379ms | 
+2025-03-11 18:05:12.5993 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 14.0658ms | 
+2025-03-11 18:05:12.7933 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 206.6113ms | 
+2025-03-11 18:05:12.9452 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 18:05:12.9837 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.4768ms | 
+2025-03-11 18:05:27.0705 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 18:05:27.1777 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:05:27.2146 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:05:27.5518 | INFO | Login attempt for Username: string | 
+2025-03-11 18:05:27.5518 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 18:05:28.2293 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:05:29.4798 | INFO | Executed DbCommand (277ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:05:29.7505 | ERROR | GlobalExceptionFilter caught: The type initializer for 'System.IdentityModel.Tokens.Jwt.JsonExtensions' threw an exception. | 
+2025-03-11 18:05:29.7599 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:05:29.7740 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 2552.0831ms | 
+2025-03-11 18:05:29.7740 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:05:29.7907 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 500 - application/json;+charset=utf-8 2720.8002ms | 
+2025-03-11 18:07:53.5999 | INFO | Application is starting... | 
+2025-03-11 18:07:55.5100 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 18:07:56.4228 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 18:07:56.4228 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 18:07:59.0927 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 18:07:59.1189 | INFO | Hosting environment: Development | 
+2025-03-11 18:07:59.1524 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 18:07:59.3683 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 18:08:00.3536 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 991.3042ms | 
+2025-03-11 18:08:00.5764 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 18:08:00.5863 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 18:08:00.5863 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 18:08:00.6364 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 59.9808ms | 
+2025-03-11 18:08:00.6364 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 50.4383ms | 
+2025-03-11 18:08:00.8051 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 217.7876ms | 
+2025-03-11 18:08:01.1019 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 18:08:01.1304 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 28.5408ms | 
+2025-03-11 18:08:08.5075 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 18:08:08.6524 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:08:08.6998 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:08:09.0108 | INFO | Login attempt for Username: string | 
+2025-03-11 18:08:09.0108 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 18:08:09.8169 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:08:10.9345 | INFO | Executed DbCommand (111ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:08:11.4409 | ERROR | GlobalExceptionFilter caught: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '184' bits. See https://aka.ms/IdentityModel/UnsafeRelaxHmacKeySizeValidation (Parameter 'keyBytes') | 
+2025-03-11 18:08:11.4433 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:08:11.4433 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 2750.3788ms | 
+2025-03-11 18:08:11.4433 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:08:11.4796 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 500 - application/json;+charset=utf-8 2964.4064ms | 
+2025-03-11 18:09:43.7108 | INFO | Application is starting... | 
+2025-03-11 18:09:46.5132 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 18:09:47.8867 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 18:09:47.8978 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 18:09:49.8716 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 18:09:49.8716 | INFO | Hosting environment: Development | 
+2025-03-11 18:09:49.8825 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 18:09:50.1413 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 18:09:50.6807 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 555.5537ms | 
+2025-03-11 18:09:50.8041 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 18:09:50.8041 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 18:09:50.8041 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 18:09:50.8197 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 15.5239ms | 
+2025-03-11 18:09:51.0139 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 214.5855ms | 
+2025-03-11 18:09:51.0898 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 285.7005ms | 
+2025-03-11 18:09:51.2528 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 18:09:51.2675 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 14.6587ms | 
+2025-03-11 18:09:58.1075 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 18:09:58.2197 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:09:58.2580 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:09:58.5731 | INFO | Login attempt for Username: string | 
+2025-03-11 18:09:58.5731 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 18:09:59.2331 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:10:00.5748 | INFO | Executed DbCommand (126ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:10:00.8604 | INFO | Login successful for Username: string | 
+2025-03-11 18:10:00.8682 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:10:00.8824 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 2617.5692ms | 
+2025-03-11 18:10:00.8824 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:10:00.8998 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 200 - application/json;+charset=utf-8 2792.3208ms | 
+2025-03-11 18:11:02.9901 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/login application/json 54 | 
+2025-03-11 18:11:03.0875 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:11:03.0875 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:11:03.0985 | INFO | Login attempt for Username: admin | 
+2025-03-11 18:11:03.0985 | INFO | BL: User 'admin' attempting to log in | 
+2025-03-11 18:11:03.0985 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:11:03.1288 | INFO | Executed DbCommand (22ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:11:03.1288 | WARN | BL: Login failed for user admin | 
+2025-03-11 18:11:03.2851 | ERROR | GlobalExceptionFilter caught: Invalid username or password. | 
+2025-03-11 18:11:03.2867 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:11:03.2867 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 199.3974ms | 
+2025-03-11 18:11:03.2867 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:11:03.2867 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/login application/json 54 - 500 - application/json;+charset=utf-8 291.2970ms | 
+2025-03-11 18:11:22.4125 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/login application/json 75 | 
+2025-03-11 18:11:22.4330 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:11:22.4330 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 18:11:22.4427 | INFO | Login attempt for Username: string | 
+2025-03-11 18:11:22.4427 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 18:11:22.6079 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 18:11:22.6477 | INFO | Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 18:11:22.6683 | INFO | Login successful for Username: string | 
+2025-03-11 18:11:22.6892 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 18:11:22.7012 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 265.9948ms | 
+2025-03-11 18:11:22.7012 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 18:11:22.7557 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/login application/json 75 - 200 - application/json;+charset=utf-8 343.3456ms | 
+2025-03-11 20:04:43.2166 | INFO | Request starting HTTP/2 GET https://localhost:7084/api/user/protected - - | 
+2025-03-11 20:04:43.4320 | INFO | Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user. | 
+2025-03-11 20:04:43.4778 | INFO | AuthenticationScheme: Bearer was challenged. | 
+2025-03-11 20:04:43.4778 | INFO | Request finished HTTP/2 GET https://localhost:7084/api/user/protected - - - 401 0 - 266.3997ms | 
+2025-03-11 20:05:02.3431 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/protected application/json 75 | 
+2025-03-11 20:05:02.6538 | INFO | Executing endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:05:02.7422 | INFO | Executed endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:05:02.7422 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/protected application/json 75 - 405 0 - 405.0471ms | 
+2025-03-11 20:05:24.1575 | INFO | Application is starting... | 
+2025-03-11 20:05:26.0600 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 20:05:27.0542 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 20:05:27.0542 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 20:05:28.4236 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 20:05:28.4378 | INFO | Hosting environment: Development | 
+2025-03-11 20:05:28.4595 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 20:05:28.7644 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 20:05:30.3375 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 20:05:30.3564 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 20:05:30.3564 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 20:05:30.3765 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1601.5783ms | 
+2025-03-11 20:05:30.3927 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 55.0990ms | 
+2025-03-11 20:05:30.4023 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 54.1446ms | 
+2025-03-11 20:05:30.6040 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 246.7491ms | 
+2025-03-11 20:05:30.7503 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 20:05:30.7775 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.2012ms | 
+2025-03-11 20:05:41.2578 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 20:05:41.4326 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 20:05:41.4961 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 20:05:42.1157 | INFO | Login attempt for Username: string | 
+2025-03-11 20:05:42.1157 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 20:05:43.1349 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 20:05:45.3887 | INFO | Executed DbCommand (415ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 20:05:45.7962 | INFO | Login successful for Username: string | 
+2025-03-11 20:05:45.8056 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 20:05:45.8250 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 4319.7545ms | 
+2025-03-11 20:05:45.8250 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 20:05:45.8518 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 200 - application/json;+charset=utf-8 4585.1239ms | 
+2025-03-11 20:06:12.9474 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/protected application/json 75 | 
+2025-03-11 20:06:13.2572 | INFO | Executing endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:06:13.2572 | INFO | Executed endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:06:13.2572 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/protected application/json 75 - 405 0 - 310.7967ms | 
+2025-03-11 20:06:30.6477 | INFO | Request starting HTTP/2 GET https://localhost:7084/api/user/protected - - | 
+2025-03-11 20:06:30.6801 | INFO | Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user. | 
+2025-03-11 20:06:30.6801 | INFO | AuthenticationScheme: Bearer was challenged. | 
+2025-03-11 20:06:30.6801 | INFO | Request finished HTTP/2 GET https://localhost:7084/api/user/protected - - - 401 0 - 39.1432ms | 
+2025-03-11 20:06:49.5453 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/protected - 0 | 
+2025-03-11 20:06:49.5531 | INFO | Executing endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:06:49.5531 | INFO | Executed endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:06:49.5531 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/protected - 0 - 405 0 - 11.4695ms | 
+2025-03-11 20:08:34.7513 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/protected - 0 | 
+2025-03-11 20:08:34.7890 | INFO | Executing endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:08:34.7890 | INFO | Executed endpoint '405 HTTP Method Not Supported' | 
+2025-03-11 20:08:34.8296 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/protected - 0 - 405 0 - 78.2949ms | 
+2025-03-11 20:09:12.6934 | INFO | Application is starting... | 
+2025-03-11 20:09:15.8387 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-11 20:09:16.8659 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 20:09:16.8659 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 20:09:17.3044 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 20:09:17.3044 | INFO | Hosting environment: Development | 
+2025-03-11 20:09:17.3044 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 20:09:20.0219 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 20:09:21.4765 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1477.0012ms | 
+2025-03-11 20:09:21.6431 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 20:09:21.6431 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 20:09:21.6431 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 20:09:21.6503 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.1506ms | 
+2025-03-11 20:09:21.6655 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 22.3601ms | 
+2025-03-11 20:09:21.8856 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 242.3275ms | 
+2025-03-11 20:09:22.1304 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 20:09:22.1605 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 30.3281ms | 
+2025-03-11 20:09:30.6375 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 20:09:30.9949 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 20:09:31.1381 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 20:09:32.3347 | INFO | Login attempt for Username: string | 
+2025-03-11 20:09:32.3347 | INFO | BL: User 'string' attempting to log in | 
+2025-03-11 20:09:35.1719 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 20:09:39.0383 | INFO | Executed DbCommand (370ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 20:09:40.0252 | INFO | Login successful for Username: string | 
+2025-03-11 20:09:40.0423 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 20:09:40.0951 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 8929.3456ms | 
+2025-03-11 20:09:40.1001 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 20:09:40.1266 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 200 - application/json;+charset=utf-8 9483.8186ms | 
+2025-03-11 20:10:58.3976 | INFO | Request starting HTTP/1.1 GET https://localhost:7084/api/user/protected - - | 
+2025-03-11 20:10:58.6795 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-11 20:10:58.6795 | INFO | Route matched with {action = "ProtectedEndpoint", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProtectedEndpoint() on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 20:10:58.6949 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 20:10:58.6949 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication) in 14.584ms | 
+2025-03-11 20:10:58.6949 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-11 20:10:58.6949 | INFO | Request finished HTTP/1.1 GET https://localhost:7084/api/user/protected - - - 200 - application/json;+charset=utf-8 304.1158ms | 

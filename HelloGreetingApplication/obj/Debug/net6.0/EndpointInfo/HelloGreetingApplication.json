@@ -395,7 +395,7 @@
         "tags": [
           "User"
         ],
-        "summary": "Method to Login User",
+        "summary": "Method to Login User and return JWT Token",
         "requestBody": {
           "content": {
             "application/json": {
@@ -415,6 +415,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/user/protected": {
+      "get": {
+        "tags": [
+          "User"
+        ],
         "responses": {
           "200": {
             "description": "OK"
