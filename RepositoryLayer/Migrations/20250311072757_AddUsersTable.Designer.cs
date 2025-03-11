@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RepositoryLayer.Content;
 
@@ -11,9 +12,10 @@ using RepositoryLayer.Content;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(GreetingDbContext))]
-    partial class GreetingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250311072757_AddUsersTable")]
+    partial class AddUsersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

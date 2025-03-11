@@ -10,6 +10,7 @@ using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 using NLog;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 
 namespace RepositoryLayer.Service
 {
@@ -109,6 +110,5 @@ namespace RepositoryLayer.Service
             _logger.LogInformation("Greeting with ID {Id} deleted successfully.", id);
             return true;
         }
-
     }
 }
