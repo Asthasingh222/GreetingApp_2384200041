@@ -42,8 +42,11 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddControllers();
     builder.Services.AddScoped<IGreetingRL, GreetingRL>();  // Register Repository Layer
     builder.Services.AddScoped<IGreetingBL, GreetingBL>();  // Register Business Layer
-    
-    builder.Services.AddScoped<GlobalExceptionFilter>(); //global exception
+
+builder.Services.AddScoped<IUserRL, UserRL>();
+builder.Services.AddScoped<IUserBL, UserBL>();
+
+builder.Services.AddScoped<GlobalExceptionFilter>(); //global exception
 
     var app = builder.Build();
 
@@ -52,9 +55,9 @@ var builder = WebApplication.CreateBuilder(args);
     app.UseSwaggerUI();
 
 
-// Configure the HTTP request pipeline.
+    // Configure the HTTP request pipeline.
 
-app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 
     app.UseAuthorization();
 

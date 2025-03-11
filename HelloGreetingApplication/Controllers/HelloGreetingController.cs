@@ -56,7 +56,7 @@ namespace HelloGreetingApplication.Controllers
             if (!isDeleted)
             {
                 _logger.LogWarning("API: Greeting with ID {Id} not found for deletion.", id);
-                return NotFound(new { message = "Greeting not found" });
+                throw new KeyNotFoundException("Greeting not found");
             }
 
             _logger.LogInformation("API: Greeting with ID {Id} deleted successfully.", id);
@@ -77,7 +77,7 @@ namespace HelloGreetingApplication.Controllers
             if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
             {
                 _logger.LogError("API: Invalid greeting data for update.");
-                return BadRequest(new { success = false, message = "Greeting message cannot be empty" });
+                throw new ArgumentException("Greeting message cannot be empty");
             }
 
             bool updated = greetingBL.UpdateGreeting(id, greetingModel);
@@ -85,7 +85,7 @@ namespace HelloGreetingApplication.Controllers
             if (!updated)
             {
                 _logger.LogWarning("API: Greeting with ID {Id} not found.", id);
-                return NotFound(new { success = false, message = "Greeting not found" });
+                throw new KeyNotFoundException("Greeting not found");
             }
 
             _logger.LogInformation("API: Greeting with ID {Id} updated successfully.", id);
@@ -124,7 +124,7 @@ namespace HelloGreetingApplication.Controllers
             if (greeting == null)
             {
                 _logger.LogWarning("API: Greeting with ID {Id} not found.", id);
-                return NotFound(new { message = "Greeting not found" });
+                throw new KeyNotFoundException("Greeting not found");
             }
 
             return Ok(new ResponseModel<GreetingModel>
@@ -143,26 +143,14 @@ namespace HelloGreetingApplication.Controllers
         [HttpPost("greeting/save")]
         public IActionResult SaveGreeting(GreetingModel greetingModel)
         {
-            try
-            {
-                if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
+            if (greetingModel == null || string.IsNullOrEmpty(greetingModel.Message))
                 {
                     _logger.LogError("Invalid greeting data received.");
-                    return BadRequest(new
-                    {
-                        success = false,
-                        message = "Greeting message cannot be empty"
-                    });
+                    throw new ArgumentException("Greeting message cannot be empty");
                 }
-
-                greetingBL.SaveGreeting(greetingModel);
-                return Ok("Greeting saved successfully.");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error saving greeting: {ex.Message}");
-                return StatusCode(500, "An error occurred while saving the greeting.");
-            }
+             greetingBL.SaveGreeting(greetingModel);
+             return Ok("Greeting saved successfully.");
+            
         }
         /// <summary>
         /// Get method to fetch all records
@@ -232,9 +220,8 @@ namespace HelloGreetingApplication.Controllers
             if (requestModel == null)
             {
                 _logger.LogWarning("POST request failed due to invalid request data.");
-                return BadRequest("Invalid request data.");
+                throw new ArgumentException("Invalid request data");
             }
-
             int newId = inMemoryStore.Keys.Any() ? inMemoryStore.Keys.Max() + 1 : 1;
             inMemoryStore[newId] = requestModel;
 
@@ -260,7 +247,7 @@ namespace HelloGreetingApplication.Controllers
             if (!inMemoryStore.ContainsKey(id))
             {
                 _logger.LogWarning($"PUT request failed. Record with ID={id} not found.");
-                return NotFound(new { message = "Record not found" });
+                throw new KeyNotFoundException("Record not found" );
             }
 
             inMemoryStore[id] = requestModel;
@@ -286,7 +273,7 @@ namespace HelloGreetingApplication.Controllers
             if (!inMemoryStore.ContainsKey(id))
             {
                 _logger.LogWarning($"PATCH request failed. Record with ID={id} not found.");
-                return NotFound(new { message = "Record not found" });
+                throw new KeyNotFoundException("Record not found");
             }
 
             var existingRecord = inMemoryStore[id];
@@ -317,10 +304,7 @@ namespace HelloGreetingApplication.Controllers
         public IActionResult Delete(int id)
         {
             if (!inMemoryStore.ContainsKey(id))
-            {
-                _logger.LogWarning($"DELETE request failed. Record with ID={id} not found.");
-                return NotFound(new { message = "Record not found" });
-            }
+                throw new KeyNotFoundException("Record not found");
 
             inMemoryStore.Remove(id);
             _logger.LogInformation($"Record deleted: ID={id}");

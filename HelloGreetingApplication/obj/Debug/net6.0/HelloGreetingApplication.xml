@@ -101,5 +101,15 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.Register(ModelLayer.Model.UserDTO)">
+            <summary>
+            Method to Register User
+            </summary>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.Login(ModelLayer.Model.UserDTO)">
+            <summary>
+            Method to Login User
+            </summary>
+        </member>
     </members>
 </doc>

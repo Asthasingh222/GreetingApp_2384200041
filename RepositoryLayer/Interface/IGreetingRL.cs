@@ -15,5 +15,6 @@ namespace RepositoryLayer.Interface
         List<GreetingModel> GetAllGreetings(); //UC6
         bool UpdateGreeting(int id, GreetingModel greeting); //UC7
         bool DeleteGreeting(int id);//UC8
+
     }
 }

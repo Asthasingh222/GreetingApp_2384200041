@@ -1156,3 +1156,640 @@ SELECT @@ROWCOUNT; |
 2025-03-08 11:47:56.4526 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication) in 110.9866ms | 
 2025-03-08 11:47:56.4526 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Post (HelloGreetingApplication)' | 
 2025-03-08 11:47:56.4624 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting application/json 42 - 201 - application/json;+charset=utf-8 145.1968ms | 
+2025-03-08 12:09:33.6968 | INFO | Application is starting... | 
+2025-03-08 12:09:36.1732 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 12:09:36.1732 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 12:09:36.5839 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 12:09:36.5895 | INFO | Hosting environment: Development | 
+2025-03-08 12:09:36.5895 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 12:09:38.5060 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 12:09:39.5309 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1008.4197ms | 
+2025-03-08 12:09:39.7005 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 12:09:39.7005 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 12:09:39.7005 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 12:09:39.8295 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 129.9056ms | 
+2025-03-08 12:09:39.8413 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 142.2310ms | 
+2025-03-08 12:09:39.9772 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 275.8401ms | 
+2025-03-08 12:09:40.1239 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 12:09:40.1437 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 19.8733ms | 
+2025-03-08 12:10:37.5097 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/greet?firstName=Astha&lastName=Jadon - - | 
+2025-03-08 12:10:37.5577 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingByName (HelloGreetingApplication)' | 
+2025-03-08 12:10:37.6241 | INFO | Route matched with {action = "GetGreetingByName", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingByName(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 12:10:38.1043 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 12:10:38.1228 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingByName (HelloGreetingApplication) in 490.8491ms | 
+2025-03-08 12:10:38.1228 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingByName (HelloGreetingApplication)' | 
+2025-03-08 12:10:38.1228 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/greet?firstName=Astha&lastName=Jadon - - - 200 - application/json;+charset=utf-8 618.7641ms | 
+2025-03-08 14:03:15.7486 | INFO | Application is starting... | 
+2025-03-08 14:03:16.5361 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 14:03:16.5361 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 14:03:16.6703 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 14:03:16.6703 | INFO | Hosting environment: Development | 
+2025-03-08 14:03:16.6703 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 14:03:17.7741 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 14:03:18.3305 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 565.5624ms | 
+2025-03-08 14:03:18.4354 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 14:03:18.4354 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 14:03:18.4354 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 10.8123ms | 
+2025-03-08 14:03:18.4354 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.5984ms | 
+2025-03-08 14:03:18.5336 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 14:03:18.6310 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.3680ms | 
+2025-03-08 14:03:18.9707 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 14:03:19.0473 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 76.6189ms | 
+2025-03-08 14:04:00.4644 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - | 
+2025-03-08 14:04:00.4826 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 14:04:00.5241 | INFO | Route matched with {action = "ThrowException", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ThrowException() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:04:00.7168 | ERROR | GlobalExceptionFilter caught: This is a test exception | 
+2025-03-08 14:04:00.7168 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:04:00.7352 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication) in 205.9861ms | 
+2025-03-08 14:04:00.7352 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.ThrowException (HelloGreetingApplication)' | 
+2025-03-08 14:04:00.7352 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/exception - - - 500 - application/json;+charset=utf-8 267.8716ms | 
+2025-03-08 14:04:11.9949 | INFO | Request starting HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/2 - - | 
+2025-03-08 14:04:11.9949 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:04:12.0204 | INFO | Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:04:12.0405 | INFO | API: Received request to delete greeting with ID: 2 | 
+2025-03-08 14:04:12.0405 | INFO | BL: Deleting greeting with ID: 2 | 
+2025-03-08 14:04:12.0405 | INFO | Attempting to delete greeting with ID: 2 | 
+2025-03-08 14:04:12.5860 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:04:13.7427 | INFO | Executed DbCommand (116ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-08 14:04:13.9316 | INFO | Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Greetings]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; | 
+2025-03-08 14:04:13.9489 | INFO | Greeting with ID 2 deleted successfully. | 
+2025-03-08 14:04:13.9489 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:04:13.9489 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 1932.0061ms | 
+2025-03-08 14:04:13.9489 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:04:13.9489 | INFO | Request finished HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/2 - - - 200 - application/json;+charset=utf-8 1957.4337ms | 
+2025-03-08 14:04:38.0134 | INFO | Request starting HTTP/2 PUT https://localhost:7084/HelloGreeting/updateGreeting/1 application/json 37 | 
+2025-03-08 14:04:38.0134 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:04:38.0265 | INFO | Route matched with {action = "UpdateGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateGreeting(Int32, ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:04:38.0724 | INFO | API: Received request to update greeting with ID: 1 | 
+2025-03-08 14:04:38.0724 | INFO | BL: Updating greeting with ID: 1 | 
+2025-03-08 14:04:38.1141 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:04:38.1189 | INFO | Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-08 14:04:38.1619 | INFO | Executed DbCommand (22ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Greetings] SET [GreetingMessage] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; | 
+2025-03-08 14:04:38.1659 | INFO | RL: Greeting with ID 1 updated successfully. | 
+2025-03-08 14:04:38.1659 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:04:38.1659 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication) in 142.3642ms | 
+2025-03-08 14:04:38.1659 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.UpdateGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:04:38.1659 | INFO | Request finished HTTP/2 PUT https://localhost:7084/HelloGreeting/updateGreeting/1 application/json 37 - 200 - application/json;+charset=utf-8 148.4105ms | 
+2025-03-08 14:06:57.8698 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/retrieveGreeting/all - - | 
+2025-03-08 14:06:57.8698 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' | 
+2025-03-08 14:06:57.8698 | INFO | Route matched with {action = "GetAllGreetings", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllGreetings() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:06:57.8698 | INFO | API: Fetching all greetings. | 
+2025-03-08 14:06:57.8698 | INFO | BL: Fetching all greetings. | 
+2025-03-08 14:06:57.8698 | INFO | Fetching all greetings from the database. | 
+2025-03-08 14:06:57.9000 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:06:57.9970 | INFO | Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [g].[Id], [g].[GreetingMessage] AS [Message]
+FROM [Greetings] AS [g] | 
+2025-03-08 14:06:57.9970 | INFO | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.List`1[[ModelLayer.Model.GreetingModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:06:57.9970 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 122.3608ms | 
+2025-03-08 14:06:57.9970 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' | 
+2025-03-08 14:06:57.9970 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/retrieveGreeting/all - - - 200 - application/json;+charset=utf-8 134.9667ms | 
+2025-03-08 14:07:20.6037 | INFO | Request starting HTTP/2 GET https://localhost:7084/HelloGreeting/retrieveGreetingById/0 - - | 
+2025-03-08 14:07:20.6037 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' | 
+2025-03-08 14:07:20.6037 | INFO | Route matched with {action = "GetGreetingById", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingById(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:07:20.6037 | INFO | API: Fetching greeting with ID: 0 | 
+2025-03-08 14:07:20.6037 | INFO | BL: Fetching greeting with ID: 0 | 
+2025-03-08 14:07:20.6037 | INFO | Fetching greeting with ID: 0 | 
+2025-03-08 14:07:20.6037 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:07:20.6195 | INFO | Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-08 14:07:20.6195 | WARN | Greeting with ID 0 not found. | 
+2025-03-08 14:07:20.6195 | ERROR | GlobalExceptionFilter caught: Greeting with ID 0 not found | 
+2025-03-08 14:07:20.6195 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:07:20.6195 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 13.9372ms | 
+2025-03-08 14:07:20.6195 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' | 
+2025-03-08 14:07:20.6195 | INFO | Request finished HTTP/2 GET https://localhost:7084/HelloGreeting/retrieveGreetingById/0 - - - 500 - application/json;+charset=utf-8 19.0628ms | 
+2025-03-08 14:32:25.9942 | INFO | Application is starting... | 
+2025-03-08 14:32:28.7359 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 14:32:28.7359 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 14:32:30.1125 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 14:32:30.1664 | INFO | Hosting environment: Development | 
+2025-03-08 14:32:30.2525 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 14:32:30.3629 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 14:32:31.4806 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1124.6559ms | 
+2025-03-08 14:32:31.5451 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 14:32:31.5451 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 14:32:31.5451 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 14:32:31.5451 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 4.1239ms | 
+2025-03-08 14:32:31.5582 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 13.0288ms | 
+2025-03-08 14:32:31.8007 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 255.4454ms | 
+2025-03-08 14:32:31.9171 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 14:32:31.9336 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.4321ms | 
+2025-03-08 14:34:52.4834 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 14:34:52.5095 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 28.4000ms | 
+2025-03-08 14:34:52.6048 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 14:34:52.6048 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 14:34:52.6048 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 14:34:52.6048 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 4.2553ms | 
+2025-03-08 14:34:52.6048 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 12.5474ms | 
+2025-03-08 14:34:52.6518 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.9761ms | 
+2025-03-08 14:34:52.9220 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - | 
+2025-03-08 14:34:52.9220 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 14:34:52.9334 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.3933ms | 
+2025-03-08 14:34:52.9658 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
+2025-03-08 14:34:52.9849 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 62.8629ms | 
+2025-03-08 14:35:21.6539 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 41 | 
+2025-03-08 14:35:21.6975 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:35:21.7618 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:35:22.7610 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-08 14:35:22.7936 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 1022.3592ms | 
+2025-03-08 14:35:22.7936 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:35:22.7936 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 41 - 400 - application/problem+json;+charset=utf-8 1145.9914ms | 
+2025-03-08 14:36:05.1080 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 43 | 
+2025-03-08 14:36:05.1080 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:36:05.1080 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:36:05.4008 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-08 14:36:05.4008 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 288.8176ms | 
+2025-03-08 14:36:05.4008 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:36:05.4008 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 43 - 400 - application/problem+json;+charset=utf-8 296.8770ms | 
+2025-03-08 14:36:32.9035 | INFO | Application is starting... | 
+2025-03-08 14:36:35.6481 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 14:36:35.6538 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 14:36:35.8823 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 14:36:35.8872 | INFO | Hosting environment: Development | 
+2025-03-08 14:36:35.8872 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 14:36:37.3097 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 14:36:38.1264 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 819.7804ms | 
+2025-03-08 14:36:38.1821 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 14:36:38.2206 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 14:36:38.2206 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 14:36:38.2308 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 48.6553ms | 
+2025-03-08 14:36:38.2308 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 17.5277ms | 
+2025-03-08 14:36:38.3317 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.4372ms | 
+2025-03-08 14:36:38.6005 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 14:36:38.6239 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 23.4343ms | 
+2025-03-08 14:36:49.4659 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 36 | 
+2025-03-08 14:36:49.4807 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:36:49.5356 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:36:50.0126 | INFO | Saving Greeting: string | 
+2025-03-08 14:36:50.0126 | INFO | Saving new greeting to the database. | 
+2025-03-08 14:36:50.9049 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:36:52.2761 | INFO | Executed DbCommand (205ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([GreetingMessage])
+VALUES (@p0);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); | 
+2025-03-08 14:36:52.4571 | INFO | Greeting saved successfully. | 
+2025-03-08 14:36:52.4641 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-08 14:36:52.4842 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 2932.1377ms | 
+2025-03-08 14:36:52.4842 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:36:52.5152 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 36 - 200 - text/plain;+charset=utf-8 3047.7960ms | 
+2025-03-08 14:37:11.8222 | INFO | Request starting HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/2 - - | 
+2025-03-08 14:37:11.8222 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:37:11.8222 | INFO | Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-08 14:37:11.8385 | INFO | API: Received request to delete greeting with ID: 2 | 
+2025-03-08 14:37:11.8385 | INFO | BL: Deleting greeting with ID: 2 | 
+2025-03-08 14:37:11.8385 | INFO | Attempting to delete greeting with ID: 2 | 
+2025-03-08 14:37:11.8962 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 14:37:12.7332 | INFO | Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[GreetingMessage]
+FROM [Greetings] AS [g]
+WHERE [g].[Id] = @__p_0 | 
+2025-03-08 14:37:12.7332 | WARN | Greeting with ID 2 not found for deletion. | 
+2025-03-08 14:37:12.7332 | WARN | API: Greeting with ID 2 not found for deletion. | 
+2025-03-08 14:37:13.1155 | ERROR | GlobalExceptionFilter caught: Greeting not found | 
+2025-03-08 14:37:13.1199 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 14:37:13.1199 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 1292.4465ms | 
+2025-03-08 14:37:13.1199 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' | 
+2025-03-08 14:37:13.1199 | INFO | Request finished HTTP/2 DELETE https://localhost:7084/HelloGreeting/deleteGreeting/2 - - - 500 - application/json;+charset=utf-8 1309.0802ms | 
+2025-03-08 15:10:40.7649 | INFO | Application is starting... | 
+2025-03-08 15:10:42.5115 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 15:10:42.5115 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 15:10:42.6594 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 15:10:42.6594 | INFO | Hosting environment: Development | 
+2025-03-08 15:10:42.6594 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 15:10:44.2437 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 15:10:44.8692 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 629.3153ms | 
+2025-03-08 15:10:44.9344 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 15:10:44.9344 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 15:10:44.9344 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 15:10:44.9344 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.5761ms | 
+2025-03-08 15:10:44.9525 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 18.0415ms | 
+2025-03-08 15:10:45.1532 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 218.7701ms | 
+2025-03-08 15:10:45.2431 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 15:10:45.2683 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 25.1442ms | 
+2025-03-08 15:11:12.0279 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/User/User/register application/json 123 | 
+2025-03-08 15:11:12.0425 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 15:11:12.0938 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-08 15:11:12.1875 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 15:11:12.2038 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 102.534ms | 
+2025-03-08 15:11:12.2038 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 15:11:12.2038 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/User/User/register application/json 123 - 200 - application/json;+charset=utf-8 176.3561ms | 
+2025-03-08 15:13:38.4645 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/User/User/login application/json 123 | 
+2025-03-08 15:13:38.4645 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-08 15:13:38.4645 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-08 15:13:38.4645 | INFO | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 15:13:38.4793 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 6.7749ms | 
+2025-03-08 15:13:38.4793 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-08 15:13:38.4793 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/User/User/login application/json 123 - 401 - application/json;+charset=utf-8 14.3453ms | 
+2025-03-08 15:25:11.8291 | INFO | Application is starting... | 
+2025-03-08 15:25:13.5864 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 15:25:13.5884 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 15:25:14.8440 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 15:25:14.9283 | INFO | Hosting environment: Development | 
+2025-03-08 15:25:14.9372 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 15:25:16.3083 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 15:25:16.7372 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 428.9759ms | 
+2025-03-08 15:25:16.8969 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 15:25:16.8969 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 15:25:16.8969 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 15:25:16.9003 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 10.2071ms | 
+2025-03-08 15:25:16.9003 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.2325ms | 
+2025-03-08 15:25:17.0217 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 124.6171ms | 
+2025-03-08 15:25:17.1454 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 15:25:17.1658 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.3923ms | 
+2025-03-08 15:27:01.5289 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/User/User/register application/json 123 | 
+2025-03-08 15:27:01.5631 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 15:27:01.6199 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-08 15:27:01.7321 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 15:27:01.7460 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 120.5395ms | 
+2025-03-08 15:27:01.7460 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 15:27:01.7460 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/User/User/register application/json 123 - 200 - application/json;+charset=utf-8 215.4690ms | 
+2025-03-08 15:27:11.0816 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/User/User/login application/json 123 | 
+2025-03-08 15:27:11.0887 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-08 15:27:11.0887 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-08 15:27:11.1059 | INFO | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 15:27:11.1059 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 16.9032ms | 
+2025-03-08 15:27:11.1059 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-08 15:27:11.1059 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/User/User/login application/json 123 - 401 - application/json;+charset=utf-8 30.6211ms | 
+2025-03-08 16:13:37.9565 | INFO | Application is starting... | 
+2025-03-08 16:13:40.4699 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-08 16:13:40.4699 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-08 16:13:41.0408 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-08 16:13:41.2336 | INFO | Hosting environment: Development | 
+2025-03-08 16:13:41.3259 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-08 16:13:41.7052 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-08 16:13:42.5003 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 800.9835ms | 
+2025-03-08 16:13:42.8573 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-08 16:13:42.8573 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-08 16:13:42.8573 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-08 16:13:42.9937 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 136.3663ms | 
+2025-03-08 16:13:43.0046 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 141.1452ms | 
+2025-03-08 16:13:43.2674 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 403.3582ms | 
+2025-03-08 16:13:43.3735 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-08 16:13:43.4286 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 55.0822ms | 
+2025-03-08 16:13:54.9969 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/User/User/register application/json 134 | 
+2025-03-08 16:13:55.0271 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 16:13:55.0790 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-08 16:13:56.4483 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-08 16:13:58.0834 | ERROR | Failed executing DbCommand (576ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([FirstName], [LastName], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); | 
+2025-03-08 16:13:58.5337 | ERROR | An exception occurred in the database while saving changes for context type 'RepositoryLayer.Content.GreetingDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:c67f5eab-f2fb-4402-951a-8568f272a381
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) | Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:c67f5eab-f2fb-4402-951a-8568f272a381
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2025-03-08 16:13:58.7666 | ERROR | GlobalExceptionFilter caught: An error occurred while saving the entity changes. See the inner exception for details. | 
+2025-03-08 16:13:58.7666 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-08 16:13:58.7866 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 3697.9349ms | 
+2025-03-08 16:13:58.7866 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-08 16:13:58.8076 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/User/User/register application/json 134 - 500 - application/json;+charset=utf-8 3809.0164ms | 
+2025-03-11 13:00:04.7732 | INFO | Application is starting... | 
+2025-03-11 13:00:08.9357 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 13:00:08.9357 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 13:00:09.2519 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 13:00:09.2581 | INFO | Hosting environment: Development | 
+2025-03-11 13:00:09.2581 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 13:00:10.7957 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 13:00:11.2925 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 500.6999ms | 
+2025-03-11 13:00:11.3223 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 13:00:11.3223 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-11 13:00:11.3223 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 13:00:11.3502 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 27.8738ms | 
+2025-03-11 13:00:11.3502 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-11 13:00:11.3830 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-11 13:00:11.3830 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-11 13:00:11.3830 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 59.0276ms | 
+2025-03-11 13:00:11.3830 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 13:00:11.4014 | INFO | The file /swagger-ui.css was not modified | 
+2025-03-11 13:00:11.4014 | INFO | The file /swagger-ui-standalone-preset.js was not modified | 
+2025-03-11 13:00:11.4014 | INFO | The file /index.css was not modified | 
+2025-03-11 13:00:11.4014 | INFO | The file /swagger-ui-bundle.js was not modified | 
+2025-03-11 13:00:11.4135 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 304 - text/css 35.4908ms | 
+2025-03-11 13:00:11.4135 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 304 - application/javascript 95.0791ms | 
+2025-03-11 13:00:11.4135 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 34.7530ms | 
+2025-03-11 13:00:11.4135 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 304 - text/css 59.4851ms | 
+2025-03-11 13:00:11.9298 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 533.6636ms | 
+2025-03-11 13:00:12.4179 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 13:00:12.5098 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.8792ms | 
+2025-03-11 13:06:52.3220 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 80 | 
+2025-03-11 13:06:52.3350 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:06:52.3894 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:06:53.4592 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:06:54.4908 | INFO | Executed DbCommand (135ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:06:54.5531 | INFO | Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:06:54.5531 | INFO | Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:06:54.7593 | INFO | Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-11 13:06:54.7877 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:06:54.7877 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2404.4158ms | 
+2025-03-11 13:06:54.7877 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:06:54.8046 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 80 - 200 - application/json;+charset=utf-8 2487.9259ms | 
+2025-03-11 13:08:28.2152 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 13:08:28.2249 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:08:28.2249 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:08:28.2249 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:08:28.2970 | INFO | Executed DbCommand (21ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:08:28.2970 | INFO | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:08:28.2970 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 70.6984ms | 
+2025-03-11 13:08:28.2970 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:08:28.2970 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 401 - application/json;+charset=utf-8 83.3040ms | 
+2025-03-11 13:09:02.9282 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 75 | 
+2025-03-11 13:09:02.9468 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:09:02.9468 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:09:02.9959 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:09:03.0163 | INFO | Executed DbCommand (16ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:09:03.0236 | INFO | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:09:03.0236 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 84.1492ms | 
+2025-03-11 13:09:03.0236 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:09:03.0236 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 75 - 401 - application/json;+charset=utf-8 90.2794ms | 
+2025-03-11 13:10:03.6938 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 80 | 
+2025-03-11 13:10:03.6938 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:10:03.6938 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:10:03.6938 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:10:03.7098 | INFO | Executed DbCommand (9ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:10:03.7098 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType4`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.UserDTO, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. | 
+2025-03-11 13:10:03.7098 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 16.2301ms | 
+2025-03-11 13:10:03.7098 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:10:03.7098 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 80 - 200 - application/json;+charset=utf-8 20.5822ms | 
+2025-03-11 13:21:01.7477 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 74 | 
+2025-03-11 13:21:01.7477 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:21:01.7477 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:21:01.7726 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:21:01.7726 | INFO | Executed DbCommand (8ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:21:01.7889 | INFO | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:21:01.7889 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 34.0319ms | 
+2025-03-11 13:21:01.7889 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:21:01.7889 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 74 - 401 - application/json;+charset=utf-8 42.5321ms | 
+2025-03-11 13:21:15.1352 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 74 | 
+2025-03-11 13:21:15.1352 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:21:15.1352 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:21:15.1352 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:21:15.1602 | INFO | Executed DbCommand (16ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:21:15.1635 | INFO | Executing ConflictObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:21:15.1635 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 25.6834ms | 
+2025-03-11 13:21:15.1635 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:21:15.1635 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 74 - 409 - application/json;+charset=utf-8 28.2805ms | 
+2025-03-11 13:21:24.8869 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 79 | 
+2025-03-11 13:21:24.8869 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:21:24.8869 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:21:24.8968 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:21:24.8968 | INFO | Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:21:24.9113 | INFO | Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:21:24.9113 | INFO | Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:21:24.9113 | INFO | Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-11 13:21:24.9270 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:21:24.9270 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 33.1426ms | 
+2025-03-11 13:21:24.9270 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:21:24.9270 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 79 - 200 - application/json;+charset=utf-8 42.5232ms | 
+2025-03-11 13:21:35.9902 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 79 | 
+2025-03-11 13:21:35.9902 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:21:35.9902 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:21:35.9902 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:21:36.0056 | INFO | Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:21:36.0056 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType4`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.UserDTO, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. | 
+2025-03-11 13:21:36.0056 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 14.2923ms | 
+2025-03-11 13:21:36.0056 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:21:36.0056 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 79 - 200 - application/json;+charset=utf-8 24.0649ms | 
+2025-03-11 13:39:09.1619 | INFO | Application is starting... | 
+2025-03-11 13:39:11.0415 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 13:39:11.0415 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 13:39:11.1703 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 13:39:11.1703 | INFO | Hosting environment: Development | 
+2025-03-11 13:39:11.1703 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 13:39:12.6000 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 13:39:13.2175 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 13:39:13.2175 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 13:39:13.2175 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 13:39:13.2175 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 591.1489ms | 
+2025-03-11 13:39:13.2274 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.4608ms | 
+2025-03-11 13:39:13.2274 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 19.7399ms | 
+2025-03-11 13:39:13.3043 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.9222ms | 
+2025-03-11 13:39:13.4572 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 13:39:13.4796 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.4194ms | 
+2025-03-11 13:39:44.4112 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 75 | 
+2025-03-11 13:39:44.4271 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:39:44.4744 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:39:44.7735 | INFO | Register method called for Username: asthasingh | 
+2025-03-11 13:39:45.6929 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:39:46.8851 | INFO | Executed DbCommand (176ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:39:46.9149 | WARN | User asthasingh registration failed: Username or Email already exists. | 
+2025-03-11 13:39:47.0220 | ERROR | GlobalExceptionFilter caught: User registration failed. Username or Email already exists. | 
+2025-03-11 13:39:47.0220 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:39:47.0402 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2558.6344ms | 
+2025-03-11 13:39:47.0402 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:39:47.0516 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 75 - 500 - application/json;+charset=utf-8 2640.4934ms | 
+2025-03-11 13:49:40.5853 | INFO | Application is starting... | 
+2025-03-11 13:49:42.9433 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-11 13:49:42.9433 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-11 13:49:43.1089 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-11 13:49:43.1089 | INFO | Hosting environment: Development | 
+2025-03-11 13:49:43.1089 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-11 13:49:44.4401 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-11 13:49:45.1176 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 695.0525ms | 
+2025-03-11 13:49:45.3086 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-11 13:49:45.3086 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-11 13:49:45.3258 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-11 13:49:45.3258 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 22.1398ms | 
+2025-03-11 13:49:45.3419 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 27.3359ms | 
+2025-03-11 13:49:45.4830 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 167.7064ms | 
+2025-03-11 13:49:45.6648 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-11 13:49:45.7050 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 40.1820ms | 
+2025-03-11 13:49:54.6309 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 71 | 
+2025-03-11 13:49:54.6473 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:49:54.6893 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:49:55.0165 | INFO | Register method called for Username: string | 
+2025-03-11 13:49:55.0165 | INFO | Registration attempt for Username: string | 
+2025-03-11 13:49:55.7163 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:49:57.3692 | INFO | Executed DbCommand (704ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:49:57.4657 | INFO | Executed DbCommand (26ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:49:57.4848 | INFO | Executed DbCommand (13ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-11 13:49:57.7227 | INFO | Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-11 13:49:57.7392 | INFO | User string registered successfully. | 
+2025-03-11 13:49:57.7392 | INFO | User string registered successfully. | 
+2025-03-11 13:49:57.7561 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-11 13:49:57.7777 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 3080.1299ms | 
+2025-03-11 13:49:57.7777 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-11 13:49:57.8147 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 71 - 200 - application/json;+charset=utf-8 3183.7839ms | 
+2025-03-11 13:50:04.4902 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-11 13:50:04.4902 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:50:04.4902 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-11 13:50:04.5055 | INFO | Login attempt for Username: string | 
+2025-03-11 13:50:04.5055 | INFO | Login attempt for Username: string | 
+2025-03-11 13:50:04.5055 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-11 13:50:04.5699 | INFO | Executed DbCommand (18ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-11 13:50:04.5699 | INFO | Login successful for Username: string | 
+2025-03-11 13:50:04.5699 | INFO | Login successful for Username: string | 
+2025-03-11 13:50:04.5699 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ModelLayer.Model.UserDTO, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. | 
+2025-03-11 13:50:04.5699 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 75.2017ms | 
+2025-03-11 13:50:04.5699 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-11 13:50:04.5699 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 200 - application/json;+charset=utf-8 90.6224ms | 
