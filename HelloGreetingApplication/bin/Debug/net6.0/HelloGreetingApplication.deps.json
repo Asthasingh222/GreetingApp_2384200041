@@ -9,13 +9,16 @@
       "HelloGreetingApplication/1.0.0": {
         "dependencies": {
           "BusinessLayer": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
           "Microsoft.EntityFrameworkCore.Design": "6.0.36",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
           "Middleware": "1.0.0",
           "NLog.Config": "4.7.15",
           "NLog.Extensions.Logging": "5.4.0",
           "NLog.Web.AspNetCore": "5.4.0",
           "RepositoryLayer": "1.0.0",
-          "Swashbuckle.AspNetCore": "7.3.1"
+          "Swashbuckle.AspNetCore": "7.3.1",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0"
         },
         "runtime": {
           "HelloGreetingApplication.dll": {}
@@ -62,6 +65,17 @@
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.3.0",
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.0"
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.36": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.36.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "6.0.36.0",
+            "fileVersion": "6.0.3624.51604"
+          }
         }
       },
       "Microsoft.AspNetCore.Authorization/2.3.0": {
@@ -1622,6 +1636,13 @@
       "sha512": "sha512-gnLnKGawBjqBnU9fEuel3VcYAARkjyONAliaGDfMc8o8HBtfh+HrOPEoR8Xx4b2RnMb7uxdBDOvEAC7sul79ig==",
       "path": "microsoft.aspnetcore.authentication.core/2.3.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.36": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vGDqvZUehbtKdoUzVO32N0Lxon+1piGO6qFnA8FNXEzWhrLN5uum8ZyhWgrWYSA4b6JuCBJ/wAC7rV38wBvLew==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.36",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.3.0": {
       "type": "package",
