@@ -3117,3 +3117,99 @@ SELECT @@ROWCOUNT; |
 2025-03-24 16:35:51.2281 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication) in 981.9657ms | 
 2025-03-24 16:35:51.2281 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication)' | 
 2025-03-24 16:35:51.2350 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 320 - 200 - text/plain;+charset=utf-8 1004.9289ms | 
+2025-03-24 16:51:37.6651 | INFO | Application is starting... | 
+2025-03-24 16:51:38.9500 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:52:09.6460 | INFO | Application is starting... | 
+2025-03-24 16:52:10.7301 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:52:11.2235 | INFO | Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 | 
+2025-03-24 16:52:11.3198 | INFO | Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); | 
+2025-03-24 16:52:11.3198 | INFO | Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 | 
+2025-03-24 16:52:11.3279 | INFO | Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); | 
+2025-03-24 16:52:11.3820 | INFO | Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; | 
+2025-03-24 16:52:11.4001 | INFO | Applying migration '20250324112139_AddUserForeignKeyToGreeting'. | 
+2025-03-24 16:52:11.5123 | INFO | Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Greetings] ADD [UserId] uniqueidentifier NULL; | 
+2025-03-24 16:52:11.6120 | INFO | Executed DbCommand (99ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Greetings_UserId] ON [Greetings] ([UserId]); | 
+2025-03-24 16:52:11.6549 | INFO | Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Greetings] ADD CONSTRAINT [FK_Greetings_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE SET NULL; | 
+2025-03-24 16:52:11.6630 | INFO | Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250324112139_AddUserForeignKeyToGreeting', N'6.0.36'); | 
+2025-03-24 16:53:07.0953 | INFO | Application is starting... | 
+2025-03-24 16:53:08.8307 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:53:09.3665 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:53:09.3665 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:53:09.5838 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:53:09.5838 | INFO | Hosting environment: Development | 
+2025-03-24 16:53:09.5838 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:53:11.0901 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:53:12.0340 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 922.1956ms | 
+2025-03-24 16:53:12.1907 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:53:12.1907 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:53:12.2151 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:53:12.2362 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 45.4972ms | 
+2025-03-24 16:53:12.2362 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 52.5900ms | 
+2025-03-24 16:53:12.3821 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 166.9588ms | 
+2025-03-24 16:53:12.4734 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:53:12.4886 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.1401ms | 
+2025-03-24 16:53:55.3564 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 48 | 
+2025-03-24 16:53:55.6622 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-24 16:53:55.7965 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-24 16:53:56.8363 | INFO | Saving Greeting: Kaise hain aap log | 
+2025-03-24 16:53:56.8488 | INFO | Saving new greeting to the database. | 
+2025-03-24 16:54:00.3564 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:54:03.1633 | INFO | Executed DbCommand (338ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([GreetingMessage], [UserId])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); | 
+2025-03-24 16:54:03.5166 | INFO | Greeting saved successfully. | 
+2025-03-24 16:54:03.5343 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:54:03.5726 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 7749.9879ms | 
+2025-03-24 16:54:03.5726 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-24 16:54:03.5789 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 48 - 200 - text/plain;+charset=utf-8 8237.3452ms | 
+2025-03-24 16:56:16.6157 | INFO | Application is starting... | 
+2025-03-24 16:56:18.2768 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:56:18.8600 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:56:18.8600 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:56:20.4356 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:56:20.9544 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:56:20.9740 | INFO | Hosting environment: Development | 
+2025-03-24 16:56:20.9740 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:56:21.2672 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 821.0732ms | 
+2025-03-24 16:56:21.3071 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:56:21.3792 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:56:21.3792 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:56:21.3902 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 25.7642ms | 
+2025-03-24 16:56:21.3902 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 98.9438ms | 
+2025-03-24 16:56:21.5398 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 150.5476ms | 
+2025-03-24 16:56:21.6232 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:56:21.6512 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 28.0033ms | 
+2025-03-24 16:56:48.1903 | INFO | Request starting HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 98 | 
+2025-03-24 16:56:48.3801 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-24 16:56:48.4309 | INFO | Route matched with {action = "SaveGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveGreeting(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). | 
+2025-03-24 16:56:48.9311 | INFO | Saving Greeting: bs test krri hun | 
+2025-03-24 16:56:48.9311 | INFO | Saving new greeting to the database. | 
+2025-03-24 16:56:50.3678 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:56:51.6274 | INFO | Executed DbCommand (109ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Greetings] ([GreetingMessage], [UserId])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Greetings]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); | 
+2025-03-24 16:56:51.8022 | INFO | Greeting saved successfully. | 
+2025-03-24 16:56:51.8022 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:56:51.8184 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication) in 3377.7701ms | 
+2025-03-24 16:56:51.8184 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.SaveGreeting (HelloGreetingApplication)' | 
+2025-03-24 16:56:51.8289 | INFO | Request finished HTTP/2 POST https://localhost:7084/HelloGreeting/greeting/save application/json 98 - 200 - text/plain;+charset=utf-8 3632.1924ms | 

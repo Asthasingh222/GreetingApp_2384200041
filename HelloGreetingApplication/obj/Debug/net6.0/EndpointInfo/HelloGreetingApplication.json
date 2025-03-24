@@ -524,6 +524,11 @@
           "message": {
             "minLength": 1,
             "type": "string"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RepositoryLayer.Entity
 {
@@ -14,5 +11,10 @@ namespace RepositoryLayer.Entity
 
         [Required]
         public string GreetingMessage { get; set; }
+
+        public Guid? UserId { get; set; }  // Nullable Foreign Key
+
+        [ForeignKey("UserId")]
+        public UserEntity? User { get; set; }  // Nullable Navigation Property
     }
 }

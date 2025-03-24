@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModelLayer.Model
 {
@@ -11,7 +7,9 @@ namespace ModelLayer.Model
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage ="Message cannot be empty")]
+        [Required(ErrorMessage = "Message cannot be empty")]
         public string Message { get; set; }
+
+        public Guid? UserId { get; set; } // Nullable to match the database schema
     }
 }
