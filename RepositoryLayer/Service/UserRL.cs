@@ -1,66 +1,85 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using ModelLayer.Model;
-using RepositoryLayer.Content;
-using RepositoryLayer.Entity;
+﻿using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
+using System.Security.Cryptography;
+using System.Text;
+using System.Linq;
+using System;
+using RepositoryLayer.Content;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
-public class UserRL : IUserRL
+namespace RepositoryLayer.Service
 {
-    private readonly GreetingDbContext _dbContext;
-
-    public UserRL(GreetingDbContext dbContext)
+    public class UserRL : IUserRL
     {
-        _dbContext = dbContext;
-    }
+        private readonly ILogger<UserRL> logger;
+        private readonly GreetingDbContext _context;
 
-    public void Register(UserEntity user)
-    {
-        if (IsUsernameExists(user.Username))
-            throw new Exception("Username already exists.");
-
-        if (IsEmailExists(user.Email))
-            throw new Exception("Email already registered.");
-
-        _dbContext.Users.Add(user);
-        _dbContext.SaveChanges();
-    }
-
-    public UserDTO? Login(string username, string password)
-    {
-        var user = _dbContext.Users.FirstOrDefault(u => u.Username == username);
-        if (user == null || user.PasswordHash != HashPassword(password, user.Salt))
-            return null;
-
-        return new UserDTO
+        public UserRL(GreetingDbContext context,ILogger<UserRL> logger)
         {
-            Username = user.Username,
-            Email = user.Email
-        };
-    }
+            _context = context;
+            this.logger = logger;
+        }
 
-    public bool IsUsernameExists(string username) =>
-        _dbContext.Users.Any(u => u.Username == username);
+        public bool IsUserExists(string username, string email)
+        {
+            return _context.Users.Any(u => u.Username == username || u.Email == email);
+        }
 
-    public bool IsEmailExists(string email) =>
-        _dbContext.Users.Any(u => u.Email == email);
+        public void Register(UserEntity user)
+        {
+            _context.Users.Add(user);
+            _context.SaveChanges();
+        }
 
-    public bool IsUserExists(string username, string email)
-    {
-        return _dbContext.Users.Any(u => u.Username == username || u.Email == email);
-    }
+        public UserEntity Login(string username, string password)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            if (user == null) return null;
 
-    public string GenerateSalt()
-    {
-        byte[] saltBytes = new byte[16];
-        using var rng = RandomNumberGenerator.Create();
-        rng.GetBytes(saltBytes);
-        return Convert.ToBase64String(saltBytes);
-    }
+            string hashedPassword = HashPassword(password, user.Salt);
+            return user.PasswordHash == hashedPassword ? user : null;
+        }
 
-    public string HashPassword(string password, string salt)
-    {
-        using var pbkdf2 = new Rfc2898DeriveBytes(password, Convert.FromBase64String(salt), 10000, HashAlgorithmName.SHA256);
-        return Convert.ToBase64String(pbkdf2.GetBytes(32));
+        public UserEntity? GetUserByEmail(string email)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+            logger.LogDebug("GetUserByEmail - Searching for Email: {Email}, Found: {User}", email, user);
+            return user;
+        }
+
+        public void UpdateUser(UserEntity user)
+        {
+            _context.Users.Update(user);
+            _context.SaveChanges();
+        }
+
+        public string GenerateSalt()
+        {
+            byte[] saltBytes = new byte[16];
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(saltBytes);
+            }
+            return Convert.ToBase64String(saltBytes);
+        }
+
+        public string HashPassword(string password, string salt)
+        {
+            using (var sha512 = SHA512.Create())
+            {
+                byte[] saltedPassword = Encoding.UTF8.GetBytes(password + salt);
+                byte[] hashedBytes = sha512.ComputeHash(saltedPassword);
+                return Convert.ToBase64String(hashedBytes);
+            }
+        }
+
+        public bool UpdatePasswordRL(UserEntity user)
+        {
+
+            _context.Users.Update(user);
+            _context.SaveChanges();
+            return true;
+        }
     }
 }

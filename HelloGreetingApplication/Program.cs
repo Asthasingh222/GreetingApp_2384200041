@@ -1,66 +1,103 @@
 using System.Reflection;
+using System.Text;
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Middleware;
 using NLog;
 using NLog.Web;
 using RepositoryLayer.Content;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
-using Middleware;
+using Microsoft.Extensions.Configuration;
 
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
 logger.Info("Application is starting...");
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-    // Set NLog as the default logger
-    builder.Logging.ClearProviders();
-    builder.Host.UseNLog();
+// Ensure appsettings.json is loaded correctly
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
 
-    // SQL Database Connection
-    var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
-    builder.Services.AddDbContext<GreetingDbContext>(options =>
-     options.UseSqlServer(connectionString));
+// Register Configuration as Singleton
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
-    //Adding Global Exceptions
-    builder.Services.AddControllers(options =>
+// Configure JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        options.Filters.Add<GlobalExceptionFilter>();
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
     });
 
-    // Adding Swagger
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen(c =>
-    {
-        var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-    });
+builder.Services.AddAuthorization();
 
-    // Add services to the container.
-    builder.Services.AddControllers();
-    builder.Services.AddScoped<IGreetingRL, GreetingRL>();  // Register Repository Layer
-    builder.Services.AddScoped<IGreetingBL, GreetingBL>();  // Register Business Layer
+// Set NLog as the default logger
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
+// SQL Database Connection
+var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
+builder.Services.AddDbContext<GreetingDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// Adding Global Exception Handling
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<GlobalExceptionFilter>();
+});
+
+// Adding Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
+
+// Add services to the container.
+builder.Services.AddControllers();
+
+builder.Services.AddScoped<IGreetingRL, GreetingRL>();
+builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 builder.Services.AddScoped<IUserRL, UserRL>();
 builder.Services.AddScoped<IUserBL, UserBL>();
 
-builder.Services.AddScoped<GlobalExceptionFilter>(); //global exception
+// Register Email Service
+builder.Services.AddScoped<IEmailService, EmailService>();
 
-    var app = builder.Build();
+// Register JWT services
+builder.Services.AddScoped<JwtServices>();
 
-    // Enable Swagger
-    app.UseSwagger();
-    app.UseSwaggerUI();
+// Register Global Exception Filter
+builder.Services.AddScoped<GlobalExceptionFilter>();
 
+var app = builder.Build();
 
-    // Configure the HTTP request pipeline.
+// Enable Swagger
+app.UseSwagger();
+app.UseSwaggerUI();
 
-    app.UseHttpsRedirection();
+// Configure the HTTP request pipeline.
+app.UseHttpsRedirection();
 
-    app.UseAuthorization();
+// Use Authentication & Authorization Middleware
+app.UseAuthentication();
+app.UseAuthorization();
 
-    app.MapControllers();
+app.MapControllers();
 
-    app.Run();
+app.Run();

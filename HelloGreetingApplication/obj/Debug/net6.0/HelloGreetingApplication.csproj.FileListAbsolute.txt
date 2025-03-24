@@ -3,6 +3,7 @@ C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ob
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfoInputs.cache
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfo.cs
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.csproj.CoreCompileInputs.cache
+C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\nlog.config
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\appsettings.Development.json
@@ -15,6 +16,7 @@ C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bi
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.pdb
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.xml
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Humanizer.dll
+C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -120,3 +122,4 @@ C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ob
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.pdb
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.genruntimeconfig.cache
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\ref\HelloGreetingApplication.dll
+C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\BCrypt.Net.dll

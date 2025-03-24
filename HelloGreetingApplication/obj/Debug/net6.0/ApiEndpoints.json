@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "HelloGreetingApplication.Controllers.UserController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/user/forget-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgetPasswordDTO",
+        "Type": "ModelLayer.Model.ForgetPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "api/user/login",
     "HttpMethod": "POST",
@@ -17,6 +33,16 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.UserController",
+    "Method": "ProtectedEndpoint",
+    "RelativePath": "api/user/protected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "api/user/register",
     "HttpMethod": "POST",
@@ -26,6 +52,22 @@
       {
         "Name": "user",
         "Type": "ModelLayer.Model.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/user/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDTO",
+        "Type": "ModelLayer.Model.ResetPasswordDTO",
         "IsRequired": true
       }
     ],
