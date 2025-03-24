@@ -23,12 +23,17 @@ namespace RepositoryLayer.Content
             modelBuilder.Entity<UserEntity>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
+
+            modelBuilder.Entity<GreetingEntity>()
+                .HasOne(g => g.User)
+                .WithMany()
+                .HasForeignKey(g => g.UserId)
+                .OnDelete(DeleteBehavior.SetNull); // If user is deleted, Greeting remains with null UserId
         }
 
-        // ADD THIS FOR MIGRATION PURPOSES
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured) // Ensures it's only used when not already configured
+            if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Server=LAPTOP-D8BNTJ2B\\SQLEXPRESS;Database=HelloGreetingAPI;Trusted_Connection=True;MultipleActiveResultSets=true;");
             }
