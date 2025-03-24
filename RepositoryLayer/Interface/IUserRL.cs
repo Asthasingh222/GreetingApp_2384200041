@@ -11,13 +11,14 @@ namespace RepositoryLayer.Interface
     {
 
         //UC10
-        void Register(UserEntity user);
-        UserDTO? Login(string username, string password);
-        bool IsUsernameExists(string username);
-        bool IsEmailExists(string email);
         bool IsUserExists(string username, string email);
+        void Register(UserEntity user);
+        UserEntity Login(string username, string password);
+        UserEntity GetUserByEmail(string email);
+        void UpdateUser(UserEntity user);
         string GenerateSalt();
         string HashPassword(string password, string salt);
 
+        bool UpdatePasswordRL(UserEntity user);
     }
 }

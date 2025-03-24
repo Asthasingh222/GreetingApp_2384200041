@@ -122,3 +122,4 @@ C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ob
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.pdb
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.genruntimeconfig.cache
 C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\ref\HelloGreetingApplication.dll
+C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\BCrypt.Net.dll

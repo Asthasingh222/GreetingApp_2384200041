@@ -69,5 +69,52 @@ namespace HelloGreetingApplication.Controllers
             return Ok(new { message = "You have accessed a protected resource!" });
         }
 
+
+        /// <summary>
+        /// Reset Password - Updates password using JWT token.
+        /// </summary>
+        [HttpPost("forget-password")]
+        public IActionResult ForgetPassword(ForgetPasswordDTO forgetPasswordDTO)
+        {
+            try
+            {
+                var result = _userService.ForgetPasswordBL(forgetPasswordDTO);
+                if (!result)
+                {
+                    return BadRequest("Email not found!");
+                }
+
+                return Ok("Reset password email sent successfully.");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpPost("reset-password")]
+        public IActionResult ResetPassword(ResetPasswordDTO resetPasswordDTO)
+        {
+            try
+            {
+                var result = _userService.ResetPasswordBL(resetPasswordDTO);
+                if (!result)
+                {
+                    return BadRequest("Invalid or expired token.");
+                }
+                return Ok("Password reset successfully.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
     }
 }

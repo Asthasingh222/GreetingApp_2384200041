@@ -111,5 +111,15 @@
             Method to Login User and return JWT Token
             </summary>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint">
+            <summary>
+            Protected method which require JWT authentication
+            </summary>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.ForgetPassword(ModelLayer.Model.ForgetPasswordDTO)">
+            <summary>
+            Reset Password - Updates password using JWT token.
+            </summary>
+        </member>
     </members>
 </doc>

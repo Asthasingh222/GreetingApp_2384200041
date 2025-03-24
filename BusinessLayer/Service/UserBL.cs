@@ -8,23 +8,28 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Net.Mail;
+using System.Net;
+using RepositoryLayer.Service;
 
 namespace BusinessLayer.Service
 {
     public class UserBL : IUserBL
     {
         private readonly IUserRL _userRepository;
+        private readonly JwtServices _jwtServices;
         private readonly ILogger<UserBL> _logger;
         private readonly IConfiguration _configuration;
-
-        public UserBL(IUserRL userRepository, ILogger<UserBL> logger, IConfiguration configuration)
+        private readonly IEmailService _emailService;
+        public UserBL(IUserRL userRepository, ILogger<UserBL> logger, IConfiguration configuration,JwtServices jwtServices,IEmailService emailservice)
         {
             _userRepository = userRepository;
             _logger = logger;
             _configuration = configuration;
+            _jwtServices = jwtServices;
+            _emailService = emailservice;
         }
 
-        //UC10: Register
         public string Register(UserDTO userDto)
         {
             _logger.LogInformation("Registration attempt for Username: {Username}", userDto.Username);
@@ -32,7 +37,7 @@ namespace BusinessLayer.Service
             if (_userRepository.IsUserExists(userDto.Username, userDto.Email))
             {
                 _logger.LogWarning("Registration failed: Username {Username} or Email {Email} already exists.", userDto.Username, userDto.Email);
-                throw new Exception("Username or Email already exists.");
+                return "Username or Email already exists.";
             }
 
             string salt = _userRepository.GenerateSalt();
@@ -52,7 +57,6 @@ namespace BusinessLayer.Service
             return "User registered successfully.";
         }
 
-        //UC10 +UC11: Login +jwt
         public string Login(string username, string password)
         {
             _logger.LogInformation("BL: User '{Username}' attempting to log in", username);
@@ -61,14 +65,13 @@ namespace BusinessLayer.Service
             if (user == null)
             {
                 _logger.LogWarning("BL: Login failed for user {Username}", username);
-                throw new UnauthorizedAccessException("Invalid username or password.");
+                return null;
             }
 
             return GenerateJwtToken(user);
         }
 
-        //UC11: JWT Token
-        private string GenerateJwtToken(UserDTO user)
+        private string GenerateJwtToken(UserEntity user)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -89,6 +92,64 @@ namespace BusinessLayer.Service
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public bool ForgetPasswordBL(ForgetPasswordDTO forgetPasswordDTO)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(forgetPasswordDTO.Email))
+                {
+                    throw new ArgumentException();
+                }
+                var user = _userRepository.GetUserByEmail(forgetPasswordDTO.Email);
+                if (user == null)
+                {
+                    return false;
+                }
+                string token = _jwtServices.GenerateToken(user);
+                if (string.IsNullOrWhiteSpace(token))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return _emailService.SendEmail(forgetPasswordDTO.Email, "Reset Password", token);
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (InvalidOperationException)
+            {
+                throw;
+            }
+        }
+
+        public bool ResetPasswordBL(ResetPasswordDTO resetPasswordDTO)
+        {
+            try
+            {
+                string email = _jwtServices.ValidateToken(resetPasswordDTO.Token);
+                if (string.IsNullOrEmpty(email))
+                {
+                    return false;
+                }
+
+                var user = _userRepository.GetUserByEmail(email);
+                if (user == null)
+                {
+                    return false;
+                }
+
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(resetPasswordDTO.NewPassword);
+
+                return _userRepository.UpdatePasswordRL(user);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
     }
 }

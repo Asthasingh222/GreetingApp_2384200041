@@ -2145,3 +2145,975 @@ WHERE [u].[Username] = @__username_0 |
 2025-03-11 20:10:58.6949 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication) in 14.584ms | 
 2025-03-11 20:10:58.6949 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
 2025-03-11 20:10:58.6949 | INFO | Request finished HTTP/1.1 GET https://localhost:7084/api/user/protected - - - 200 - application/json;+charset=utf-8 304.1158ms | 
+2025-03-12 13:36:55.8980 | INFO | Application is starting... | 
+2025-03-12 13:36:59.0344 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-12 13:36:59.5205 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-12 13:36:59.5208 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-12 13:36:59.7249 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-12 13:36:59.7249 | INFO | Hosting environment: Development | 
+2025-03-12 13:36:59.7249 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-12 13:37:02.1268 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-12 13:37:03.2121 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1090.1949ms | 
+2025-03-12 13:37:03.2743 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-12 13:37:03.2743 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-12 13:37:03.2743 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-12 13:37:03.2883 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 17.9373ms | 
+2025-03-12 13:37:03.3033 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 33.1271ms | 
+2025-03-12 13:37:03.5874 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 312.6243ms | 
+2025-03-12 13:37:03.9084 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-12 13:37:03.9518 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 43.3618ms | 
+2025-03-12 13:37:13.4120 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 71 | 
+2025-03-12 13:37:13.5380 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:13.5734 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:37:13.8679 | INFO | Register method called for Username: string | 
+2025-03-12 13:37:13.8810 | INFO | Registration attempt for Username: string | 
+2025-03-12 13:37:14.6233 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:37:16.3725 | INFO | Executed DbCommand (250ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-12 13:37:16.4225 | WARN | Registration failed: Username string or Email string already exists. | 
+2025-03-12 13:37:16.4225 | WARN | User string registration failed: Username or Email already exists. | 
+2025-03-12 13:37:16.5480 | ERROR | GlobalExceptionFilter caught: User registration failed. Username or Email already exists. | 
+2025-03-12 13:37:16.5533 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:37:16.5736 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2989.4607ms | 
+2025-03-12 13:37:16.5736 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:16.5910 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 71 - 500 - application/json;+charset=utf-8 3163.7937ms | 
+2025-03-12 13:37:41.0691 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 69 | 
+2025-03-12 13:37:41.0893 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:41.0893 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:37:41.0992 | INFO | Register method called for Username: user1 | 
+2025-03-12 13:37:41.0992 | INFO | Registration attempt for Username: user1 | 
+2025-03-12 13:37:41.0992 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:37:41.1334 | INFO | Executed DbCommand (11ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-12 13:37:41.1334 | WARN | Registration failed: Username user1 or Email email1 already exists. | 
+2025-03-12 13:37:41.1334 | WARN | User user1 registration failed: Username or Email already exists. | 
+2025-03-12 13:37:41.1941 | ERROR | GlobalExceptionFilter caught: User registration failed. Username or Email already exists. | 
+2025-03-12 13:37:41.1941 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:37:41.1941 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 97.3835ms | 
+2025-03-12 13:37:41.1941 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:41.1941 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 69 - 500 - application/json;+charset=utf-8 113.7560ms | 
+2025-03-12 13:37:48.5417 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 69 | 
+2025-03-12 13:37:48.5551 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:48.5551 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:37:48.5551 | INFO | Register method called for Username: user1 | 
+2025-03-12 13:37:48.5551 | INFO | Registration attempt for Username: user1 | 
+2025-03-12 13:37:48.6056 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:37:48.6056 | INFO | Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-12 13:37:48.6056 | WARN | Registration failed: Username user1 or Email email1 already exists. | 
+2025-03-12 13:37:48.6056 | WARN | User user1 registration failed: Username or Email already exists. | 
+2025-03-12 13:37:48.6721 | ERROR | GlobalExceptionFilter caught: User registration failed. Username or Email already exists. | 
+2025-03-12 13:37:48.6721 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:37:48.6721 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 116.7717ms | 
+2025-03-12 13:37:48.6721 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:37:48.6721 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 69 - 500 - application/json;+charset=utf-8 126.0146ms | 
+2025-03-12 13:38:21.8962 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 69 | 
+2025-03-12 13:38:21.8962 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:38:21.8962 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:38:21.8962 | INFO | Register method called for Username: user2 | 
+2025-03-12 13:38:21.8962 | INFO | Registration attempt for Username: user2 | 
+2025-03-12 13:38:21.8962 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:38:21.8962 | INFO | Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-12 13:38:22.0945 | INFO | Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-12 13:38:22.1154 | INFO | User user2 registered successfully. | 
+2025-03-12 13:38:22.1154 | INFO | User user2 registered successfully. | 
+2025-03-12 13:38:22.1154 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:38:22.1154 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 219.6805ms | 
+2025-03-12 13:38:22.1154 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-12 13:38:22.1154 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 69 - 200 - application/json;+charset=utf-8 222.3697ms | 
+2025-03-12 13:38:48.8196 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 69 | 
+2025-03-12 13:38:48.8196 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-12 13:38:48.8196 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:38:48.8196 | INFO | Login attempt for Username: user2 | 
+2025-03-12 13:38:48.8331 | INFO | BL: User 'user2' attempting to log in | 
+2025-03-12 13:38:48.8331 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:38:48.9032 | INFO | Executed DbCommand (13ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-12 13:38:49.0997 | INFO | Login successful for Username: user2 | 
+2025-03-12 13:38:49.0997 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:38:49.0997 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 271.4441ms | 
+2025-03-12 13:38:49.0997 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-12 13:38:49.0997 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 69 - 200 - application/json;+charset=utf-8 281.1190ms | 
+2025-03-12 13:39:01.6048 | INFO | Request starting HTTP/2 GET https://localhost:7084/api/user/protected - - | 
+2025-03-12 13:39:01.6194 | INFO | Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user. | 
+2025-03-12 13:39:01.6401 | INFO | AuthenticationScheme: Bearer was challenged. | 
+2025-03-12 13:39:01.6401 | INFO | Request finished HTTP/2 GET https://localhost:7084/api/user/protected - - - 401 0 - 32.3169ms | 
+2025-03-12 13:40:04.5202 | INFO | Request starting HTTP/1.1 GET https://localhost:7084/api/user/protected - - | 
+2025-03-12 13:40:04.6976 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-12 13:40:04.7103 | INFO | Route matched with {action = "ProtectedEndpoint", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProtectedEndpoint() on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:40:04.7103 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:40:04.7320 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication) in 18.0438ms | 
+2025-03-12 13:40:04.7320 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-12 13:40:04.7525 | INFO | Request finished HTTP/1.1 GET https://localhost:7084/api/user/protected - - - 200 - application/json;+charset=utf-8 234.7589ms | 
+2025-03-12 13:40:55.6285 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:40:55.6345 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:40:55.6804 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:40:55.7690 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:40:55.9244 | INFO | Executed DbCommand (52ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:40:56.3515 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:40:56.3515 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 675.9136ms | 
+2025-03-12 13:40:56.3515 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:40:56.4812 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 853.8966ms | 
+2025-03-12 13:40:59.3103 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:40:59.3103 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:40:59.3103 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:40:59.3180 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:40:59.3180 | INFO | Executed DbCommand (11ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:40:59.3996 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:40:59.3996 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 85.7919ms | 
+2025-03-12 13:40:59.3996 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:40:59.3996 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 92.7820ms | 
+2025-03-12 13:41:29.2318 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:41:29.2394 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:41:29.2394 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:41:29.2394 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:41:29.2585 | INFO | Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:41:29.3022 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:41:29.3022 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 61.1878ms | 
+2025-03-12 13:41:29.3022 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:41:29.3022 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 71.0730ms | 
+2025-03-12 13:41:43.8056 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:41:43.8056 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:41:43.8056 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:41:43.8204 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:41:43.9509 | INFO | Executed DbCommand (127ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:41:43.9908 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:41:43.9908 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 178.4571ms | 
+2025-03-12 13:41:43.9908 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:41:43.9908 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 186.3678ms | 
+2025-03-12 13:42:41.7574 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:42:41.8333 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:42:41.8333 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:42:41.8498 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:42:41.8498 | INFO | Executed DbCommand (12ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:42:41.9420 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:42:41.9460 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 107.4404ms | 
+2025-03-12 13:42:41.9460 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:42:41.9460 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 189.8335ms | 
+2025-03-12 13:42:49.7969 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:42:49.7969 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:42:49.7969 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:42:49.7969 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:42:49.8021 | INFO | Executed DbCommand (12ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:42:49.8612 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:42:49.8612 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 62.7849ms | 
+2025-03-12 13:42:49.8612 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:42:49.8612 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 65.6350ms | 
+2025-03-12 13:43:12.8877 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 6 | 
+2025-03-12 13:43:12.8877 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:43:12.8877 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:43:13.1310 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-12 13:43:13.1558 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 263.0287ms | 
+2025-03-12 13:43:13.1558 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:43:13.1558 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 6 - 400 - application/problem+json;+charset=utf-8 268.6045ms | 
+2025-03-12 13:44:31.6015 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 | 
+2025-03-12 13:44:31.6318 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:44:31.6318 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:44:31.6931 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:44:31.7103 | INFO | Executed DbCommand (12ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:44:31.7668 | INFO | Executing NotFoundObjectResult, writing value of type 'System.String'. | 
+2025-03-12 13:44:31.7668 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 114.1932ms | 
+2025-03-12 13:44:31.7668 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:44:31.7668 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 8 - 404 - text/plain;+charset=utf-8 157.2159ms | 
+2025-03-12 13:46:00.4304 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 18 | 
+2025-03-12 13:46:00.5694 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:00.5694 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:46:00.6985 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-12 13:46:00.6985 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 127.5812ms | 
+2025-03-12 13:46:00.6985 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:00.6985 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 18 - 400 - application/problem+json;+charset=utf-8 262.8594ms | 
+2025-03-12 13:46:09.0842 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 39 | 
+2025-03-12 13:46:09.0990 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:09.0990 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:46:09.3487 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-12 13:46:09.3487 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 108.3282ms | 
+2025-03-12 13:46:09.3487 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:09.3487 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 39 - 400 - application/problem+json;+charset=utf-8 265.0977ms | 
+2025-03-12 13:46:20.0811 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 29 | 
+2025-03-12 13:46:20.0843 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:20.0843 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:46:20.2299 | INFO | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. | 
+2025-03-12 13:46:20.2299 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 144.6952ms | 
+2025-03-12 13:46:20.2299 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:20.2424 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password application/json 29 - 400 - application/problem+json;+charset=utf-8 161.6809ms | 
+2025-03-12 13:46:37.6852 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password text/plain 29 | 
+2025-03-12 13:46:37.6852 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:37.6852 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:46:37.7126 | INFO | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. | 
+2025-03-12 13:46:37.7318 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 42.8227ms | 
+2025-03-12 13:46:37.7318 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:37.7318 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password text/plain 29 - 415 - application/problem+json;+charset=utf-8 48.6709ms | 
+2025-03-12 13:46:46.9425 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/reset-password text/plain 8 | 
+2025-03-12 13:46:46.9439 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:46.9439 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:46:46.9439 | INFO | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. | 
+2025-03-12 13:46:46.9439 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 5.8841ms | 
+2025-03-12 13:46:46.9439 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:46:46.9439 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/reset-password text/plain 8 - 415 - application/problem+json;+charset=utf-8 10.7848ms | 
+2025-03-12 13:48:24.6249 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 29 | 
+2025-03-12 13:48:24.6499 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:24.6796 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:48:24.6796 | INFO | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. | 
+2025-03-12 13:48:24.6796 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 3.4978ms | 
+2025-03-12 13:48:24.6796 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:24.6796 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 29 - 415 - application/problem+json;+charset=utf-8 59.0200ms | 
+2025-03-12 13:48:40.1800 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 29 | 
+2025-03-12 13:48:40.1800 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:40.1800 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:48:40.1800 | INFO | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. | 
+2025-03-12 13:48:40.1800 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 1.8625ms | 
+2025-03-12 13:48:40.1800 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:40.1800 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 29 - 415 - application/problem+json;+charset=utf-8 10.6504ms | 
+2025-03-12 13:48:51.7046 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 46 | 
+2025-03-12 13:48:51.7046 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:51.7046 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:48:51.7091 | INFO | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. | 
+2025-03-12 13:48:51.7091 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 1.968ms | 
+2025-03-12 13:48:51.7091 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:48:51.7091 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password text/plain 46 - 415 - application/problem+json;+charset=utf-8 16.0718ms | 
+2025-03-12 13:49:35.3001 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 | 
+2025-03-12 13:49:35.3027 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:35.3027 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:49:35.3492 | INFO | Forget Password requested for Email: asthasinghaku@gmail.com | 
+2025-03-12 13:49:35.3717 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:49:35.4896 | INFO | Executed DbCommand (102ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:49:35.4896 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:49:35.4896 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 186.4518ms | 
+2025-03-12 13:49:35.4896 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:35.4896 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 - 400 - application/json;+charset=utf-8 194.1046ms | 
+2025-03-12 13:49:44.3625 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 13:49:44.3688 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:44.3688 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:49:44.3688 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 13:49:44.3688 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:49:44.3896 | INFO | Executed DbCommand (14ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:49:44.4426 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:49:44.4426 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 72.5854ms | 
+2025-03-12 13:49:44.4426 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:44.4426 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 81.1491ms | 
+2025-03-12 13:49:49.5514 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 13:49:49.5540 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:49.5540 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:49:49.5540 | INFO | Forget Password requested for Email: email2 | 
+2025-03-12 13:49:49.5540 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:49:49.5692 | INFO | Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:49:49.6053 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:49:49.6053 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 46.7607ms | 
+2025-03-12 13:49:49.6053 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:49:49.6053 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 55.4818ms | 
+2025-03-12 13:50:13.7270 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 13:50:13.7424 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:50:13.7424 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:50:13.7424 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 13:50:13.7424 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:50:13.7649 | INFO | Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 13:50:13.7954 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:50:13.7954 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 51.7756ms | 
+2025-03-12 13:50:13.7954 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:50:13.7954 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 69.4371ms | 
+2025-03-12 13:54:18.2559 | INFO | Application is starting... | 
+2025-03-12 13:54:21.4309 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-12 13:54:22.7881 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-12 13:54:22.7881 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-12 13:54:23.7186 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-12 13:54:24.0736 | INFO | Hosting environment: Development | 
+2025-03-12 13:54:24.2926 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-12 13:54:26.0415 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-12 13:54:27.1309 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1106.5549ms | 
+2025-03-12 13:54:27.7642 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-12 13:54:27.7810 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-12 13:54:27.7810 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-12 13:54:27.7886 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 31.2251ms | 
+2025-03-12 13:54:27.7886 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 14.6668ms | 
+2025-03-12 13:54:28.1632 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 381.9254ms | 
+2025-03-12 13:54:28.3152 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-12 13:54:28.3431 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 28.1238ms | 
+2025-03-12 13:54:42.4934 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 13:54:42.8035 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:54:42.8828 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:54:44.1633 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 13:54:44.1633 | INFO | Forget password requested for email: email1 | 
+2025-03-12 13:54:45.9554 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:54:48.7064 | INFO | Executed DbCommand (453ms) [Parameters=[@__ToLower_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0 | 
+2025-03-12 13:54:49.4429 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:54:49.4630 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 6561.2045ms | 
+2025-03-12 13:54:49.4630 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:54:49.5042 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 7004.2445ms | 
+2025-03-12 13:54:55.8237 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 13:54:55.8396 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:54:55.8396 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 13:54:55.8490 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 13:54:55.8490 | INFO | Forget password requested for email: email1 | 
+2025-03-12 13:54:55.8490 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 13:54:55.8664 | INFO | Executed DbCommand (8ms) [Parameters=[@__ToLower_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0 | 
+2025-03-12 13:54:55.9031 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 13:54:55.9031 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 55.313ms | 
+2025-03-12 13:54:55.9031 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 13:54:55.9031 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 80.5482ms | 
+2025-03-12 13:59:44.5188 | INFO | Application is starting... | 
+2025-03-12 13:59:47.6455 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-12 13:59:48.1998 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-12 13:59:48.1998 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-12 13:59:49.2748 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-12 13:59:49.2748 | INFO | Hosting environment: Development | 
+2025-03-12 13:59:49.2879 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-12 13:59:50.3080 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-12 13:59:52.0160 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1712.4315ms | 
+2025-03-12 13:59:52.0950 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-12 13:59:52.0950 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-12 13:59:52.0950 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-12 13:59:52.0999 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.8756ms | 
+2025-03-12 13:59:52.0999 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 16.7596ms | 
+2025-03-12 13:59:52.2521 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 156.5838ms | 
+2025-03-12 13:59:52.5454 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-12 13:59:52.6410 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.5504ms | 
+2025-03-12 14:00:06.1329 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-12 14:00:06.2724 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:06.3285 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:00:06.6562 | INFO | Forget Password requested for Email: string | 
+2025-03-12 14:00:06.6562 | INFO | Forget password requested for email: string | 
+2025-03-12 14:00:07.3882 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:00:09.0156 | INFO | Executed DbCommand (479ms) [Parameters=[@__ToLower_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0 | 
+2025-03-12 14:00:09.5203 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:00:09.5203 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 3197.1006ms | 
+2025-03-12 14:00:09.5203 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:09.5410 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - application/json;+charset=utf-8 3409.0306ms | 
+2025-03-12 14:00:21.6575 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-12 14:00:21.6683 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:21.6683 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:00:21.6769 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 14:00:21.6769 | INFO | Forget password requested for email: email1 | 
+2025-03-12 14:00:21.6769 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:00:21.7283 | INFO | Executed DbCommand (29ms) [Parameters=[@__ToLower_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0 | 
+2025-03-12 14:00:21.7665 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:00:21.7665 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 96.8636ms | 
+2025-03-12 14:00:21.7665 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:21.7665 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - application/json;+charset=utf-8 108.4488ms | 
+2025-03-12 14:00:26.0881 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-12 14:00:26.0881 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:26.0881 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:00:26.0986 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 14:00:26.0986 | INFO | Forget password requested for email: email1 | 
+2025-03-12 14:00:26.1530 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:00:26.1717 | INFO | Executed DbCommand (17ms) [Parameters=[@__ToLower_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0 | 
+2025-03-12 14:00:26.2032 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:00:26.2032 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 108.8378ms | 
+2025-03-12 14:00:26.2032 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:00:26.2032 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - application/json;+charset=utf-8 116.2212ms | 
+2025-03-12 14:07:40.5115 | INFO | Application is starting... | 
+2025-03-12 14:09:25.1810 | INFO | Application is starting... | 
+2025-03-12 14:09:28.2823 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-12 14:09:28.9900 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-12 14:09:28.9900 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-12 14:09:31.2843 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-12 14:09:31.5022 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-12 14:09:31.5095 | INFO | Hosting environment: Development | 
+2025-03-12 14:09:31.5095 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-12 14:09:32.3374 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 1022.2721ms | 
+2025-03-12 14:09:32.4964 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-12 14:09:32.4964 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-12 14:09:32.4964 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-12 14:09:32.5277 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 40.1117ms | 
+2025-03-12 14:09:32.5481 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 50.9960ms | 
+2025-03-12 14:09:32.7466 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 249.4877ms | 
+2025-03-12 14:09:32.9122 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-12 14:09:32.9350 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.5944ms | 
+2025-03-12 14:09:43.6308 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-12 14:09:43.8975 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:09:43.9633 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:09:44.4506 | INFO | Forget Password requested for Email: string | 
+2025-03-12 14:09:44.4506 | INFO | Forget password requested for email: string | 
+2025-03-12 14:09:45.5183 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:09:48.1492 | INFO | Executed DbCommand (125ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:09:48.8194 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:09:48.8355 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 4862.5206ms | 
+2025-03-12 14:09:48.8355 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:09:48.8671 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - application/json;+charset=utf-8 5224.9365ms | 
+2025-03-12 14:10:16.7208 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-12 14:10:16.7313 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:10:16.7313 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:10:16.7313 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 14:10:16.7313 | INFO | Forget password requested for email: email1 | 
+2025-03-12 14:10:16.7415 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:10:16.7634 | INFO | Executed DbCommand (16ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:10:16.8588 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:10:16.8588 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 123.5566ms | 
+2025-03-12 14:10:16.8588 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:10:16.8588 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - application/json;+charset=utf-8 139.3432ms | 
+2025-03-12 14:12:30.1340 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 | 
+2025-03-12 14:12:30.2010 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:12:30.2214 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:12:30.3048 | INFO | Forget Password requested for Email: email1 | 
+2025-03-12 14:12:30.3048 | INFO | Forget password requested for email: email1 | 
+2025-03-12 14:12:30.5847 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:12:31.0735 | INFO | Executed DbCommand (453ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:12:31.3209 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:12:31.3536 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 1113.3191ms | 
+2025-03-12 14:12:31.3536 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:12:31.4177 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 29 - 400 - application/json;+charset=utf-8 1296.5901ms | 
+2025-03-12 14:12:52.3295 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 38 | 
+2025-03-12 14:12:52.3918 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:12:52.3918 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:12:52.4127 | INFO | Forget Password requested for Email: asthasinghjadon | 
+2025-03-12 14:12:52.4127 | INFO | Forget password requested for email: asthasinghjadon | 
+2025-03-12 14:12:52.4127 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:12:52.4424 | INFO | Executed DbCommand (23ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:12:52.4430 | WARN | User with email asthasinghjadon not found. | 
+2025-03-12 14:12:52.4430 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:12:52.4430 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 38.3914ms | 
+2025-03-12 14:12:52.4430 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:12:52.4430 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 38 - 400 - application/json;+charset=utf-8 122.8082ms | 
+2025-03-12 14:13:12.6490 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 | 
+2025-03-12 14:13:12.6645 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:13:12.6645 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:13:12.6775 | INFO | Forget Password requested for Email: asthasinghaku@gmail.com | 
+2025-03-12 14:13:12.6775 | INFO | Forget password requested for email: asthasinghaku@gmail.com | 
+2025-03-12 14:13:12.6775 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:13:12.7652 | INFO | Executed DbCommand (82ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:13:12.7652 | WARN | User with email asthasinghaku@gmail.com not found. | 
+2025-03-12 14:13:12.7705 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:13:12.7705 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 96.9406ms | 
+2025-03-12 14:13:12.7705 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:13:12.7705 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 - 400 - application/json;+charset=utf-8 126.7185ms | 
+2025-03-12 14:13:54.8517 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 | 
+2025-03-12 14:13:54.8664 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:13:54.8664 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-12 14:13:54.8853 | INFO | Forget Password requested for Email: asthasinghaku@gmail.com | 
+2025-03-12 14:13:54.8853 | INFO | Forget password requested for email: asthasinghaku@gmail.com | 
+2025-03-12 14:13:54.8853 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-12 14:13:54.9089 | INFO | Executed DbCommand (18ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-12 14:13:54.9089 | WARN | User with email asthasinghaku@gmail.com not found. | 
+2025-03-12 14:13:54.9118 | INFO | Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-12 14:13:54.9118 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 42.6572ms | 
+2025-03-12 14:13:54.9118 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-12 14:13:54.9118 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 46 - 400 - application/json;+charset=utf-8 69.8424ms | 
+2025-03-20 14:12:46.5803 | INFO | Application is starting... | 
+2025-03-20 14:12:48.5053 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-20 14:12:48.9113 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-20 14:12:48.9113 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-20 14:12:49.0681 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-20 14:12:49.0681 | INFO | Hosting environment: Development | 
+2025-03-20 14:12:49.0681 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-20 14:12:51.5035 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger - - | 
+2025-03-20 14:12:51.9503 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger - - - 301 0 - 450.2602ms | 
+2025-03-20 14:12:51.9503 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-20 14:12:52.1245 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 177.2539ms | 
+2025-03-20 14:12:52.1801 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-20 14:12:52.1801 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-20 14:12:52.1801 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-20 14:12:52.1811 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-20 14:12:52.1811 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-20 14:12:52.1811 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 3.1831ms | 
+2025-03-20 14:12:52.1811 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-20 14:12:52.1811 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 7.9471ms | 
+2025-03-20 14:12:52.1811 | INFO | Sending file. Request path: '/index.css'. Physical path: 'N/A' | 
+2025-03-20 14:12:52.1970 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-20 14:12:52.2403 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 200 202 text/css 59.9559ms | 
+2025-03-20 14:12:52.2574 | INFO | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' | 
+2025-03-20 14:12:52.2657 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 200 154948 text/css 85.5229ms | 
+2025-03-20 14:12:52.2805 | INFO | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' | 
+2025-03-20 14:12:52.2805 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 200 229223 application/javascript 101.8172ms | 
+2025-03-20 14:12:52.3639 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 166.8541ms | 
+2025-03-20 14:12:52.3829 | INFO | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' | 
+2025-03-20 14:12:52.3842 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 200 1466324 application/javascript 203.0570ms | 
+2025-03-20 14:12:52.6693 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-20 14:12:52.6964 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - | 
+2025-03-20 14:12:52.6964 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
+2025-03-20 14:12:52.6964 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 1.9893ms | 
+2025-03-20 14:12:52.6964 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.1843ms | 
+2025-03-20 14:13:07.9374 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-20 14:13:08.0732 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-20 14:13:08.1259 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-20 14:13:09.5244 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-20 14:13:11.0645 | INFO | Executed DbCommand (124ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-20 14:15:08.9001 | INFO | Application is starting... | 
+2025-03-20 14:16:58.5185 | INFO | Application is starting... | 
+2025-03-20 14:16:59.6226 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-20 14:17:00.2429 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-20 14:17:00.2431 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-20 14:17:00.4155 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-20 14:17:00.4155 | INFO | Hosting environment: Development | 
+2025-03-20 14:17:00.4155 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-20 14:17:02.0931 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-20 14:17:02.8052 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 713.8853ms | 
+2025-03-20 14:17:03.1472 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-20 14:17:03.1472 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-20 14:17:03.1472 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-20 14:17:03.1502 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 12.0522ms | 
+2025-03-20 14:17:03.1502 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 15.7161ms | 
+2025-03-20 14:17:03.3046 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 155.5873ms | 
+2025-03-20 14:17:03.4091 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-20 14:17:03.4291 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.0074ms | 
+2025-03-20 14:17:19.5244 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-20 14:17:19.6456 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-20 14:17:19.6947 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-20 14:17:20.6933 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-20 14:17:21.7336 | INFO | Executed DbCommand (90ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 15:52:30.8291 | INFO | Application is starting... | 
+2025-03-24 15:52:33.8858 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 15:52:34.6863 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 15:52:34.6863 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 15:52:35.3541 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 15:52:35.3541 | INFO | Hosting environment: Development | 
+2025-03-24 15:52:35.3541 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 15:52:36.3510 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger - - | 
+2025-03-24 15:52:36.8751 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger - - - 301 0 - 536.4527ms | 
+2025-03-24 15:52:36.8841 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 15:52:37.3354 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 451.9846ms | 
+2025-03-24 15:52:37.3593 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - | 
+2025-03-24 15:52:37.3593 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.css - - | 
+2025-03-24 15:52:37.3593 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - | 
+2025-03-24 15:52:37.3593 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - | 
+2025-03-24 15:52:37.3597 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 15:52:37.3597 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.6919ms | 
+2025-03-24 15:52:37.3597 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 15:52:37.3944 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 21.7158ms | 
+2025-03-24 15:52:37.3944 | INFO | Sending file. Request path: '/index.css'. Physical path: 'N/A' | 
+2025-03-24 15:52:37.4500 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.css - - - 200 202 text/css 90.4363ms | 
+2025-03-24 15:52:37.5102 | INFO | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' | 
+2025-03-24 15:52:37.5219 | INFO | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' | 
+2025-03-24 15:52:37.5219 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui.css - - - 200 154948 text/css 165.7094ms | 
+2025-03-24 15:52:37.5374 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-standalone-preset.js - - - 200 229223 application/javascript 177.7657ms | 
+2025-03-24 15:52:37.5676 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 15:52:37.6377 | INFO | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' | 
+2025-03-24 15:52:37.6377 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/swagger-ui-bundle.js - - - 200 1466324 application/javascript 279.1677ms | 
+2025-03-24 15:52:37.7702 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 202.5460ms | 
+2025-03-24 15:52:38.0916 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 15:52:38.1254 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 33.7514ms | 
+2025-03-24 15:52:38.3764 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - | 
+2025-03-24 15:52:38.5080 | INFO | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' | 
+2025-03-24 15:52:38.5212 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/favicon-32x32.png - - - 200 628 image/png 144.7599ms | 
+2025-03-24 15:53:00.5873 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 15:53:00.9096 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 15:53:01.0484 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 15:53:04.5306 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 15:53:08.2989 | INFO | Executed DbCommand (324ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:02:27.1908 | INFO | Application is starting... | 
+2025-03-24 16:02:28.7307 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:02:29.2595 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:02:29.2595 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:02:30.1819 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:02:30.2009 | INFO | Hosting environment: Development | 
+2025-03-24 16:02:30.2326 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:02:30.4215 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:02:31.0014 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 583.4964ms | 
+2025-03-24 16:02:31.3229 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:02:31.3229 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:02:31.3229 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:02:31.3286 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.6171ms | 
+2025-03-24 16:02:31.3443 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 21.3483ms | 
+2025-03-24 16:02:31.8939 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 571.0345ms | 
+2025-03-24 16:02:31.9585 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:02:31.9720 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.4432ms | 
+2025-03-24 16:02:46.5976 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 16:02:46.8921 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:02:47.0305 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:02:50.3498 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:02:53.7728 | INFO | Executed DbCommand (344ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:04:58.3941 | INFO | Application is starting... | 
+2025-03-24 16:04:59.8799 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:05:00.5115 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:05:00.5115 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:05:00.6932 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:05:00.6932 | INFO | Hosting environment: Development | 
+2025-03-24 16:05:00.6932 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:05:02.0404 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:05:02.9705 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 935.9706ms | 
+2025-03-24 16:05:02.9973 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:05:02.9973 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:05:03.0024 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.9035ms | 
+2025-03-24 16:05:03.0024 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:05:03.0024 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 15.1834ms | 
+2025-03-24 16:05:03.1172 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.9489ms | 
+2025-03-24 16:05:03.1962 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:05:03.2134 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.2430ms | 
+2025-03-24 16:05:15.7974 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 16:05:16.1928 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:05:16.3102 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:05:19.9385 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:05:23.6002 | INFO | Executed DbCommand (282ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:07:00.1798 | INFO | Application is starting... | 
+2025-03-24 16:07:01.5054 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:07:01.9327 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:07:01.9327 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:07:02.1265 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:07:02.1265 | INFO | Hosting environment: Development | 
+2025-03-24 16:07:02.1265 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:07:02.8765 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:07:03.4513 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 577.4900ms | 
+2025-03-24 16:07:03.5933 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:07:03.6253 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:07:03.6253 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:07:03.6443 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 50.8953ms | 
+2025-03-24 16:07:03.6443 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 20.9535ms | 
+2025-03-24 16:07:03.7780 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 145.4139ms | 
+2025-03-24 16:07:03.8804 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:07:03.9063 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 25.9196ms | 
+2025-03-24 16:07:12.9708 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 16:07:13.1286 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:07:13.1768 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:07:15.1892 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:07:16.7168 | INFO | Executed DbCommand (121ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:17:25.7815 | INFO | Application is starting... | 
+2025-03-24 16:17:27.3053 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:17:27.8057 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:17:27.8057 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:17:28.6209 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:17:28.6209 | INFO | Hosting environment: Development | 
+2025-03-24 16:17:28.6209 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:17:28.6339 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:17:29.2249 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 571.8047ms | 
+2025-03-24 16:17:29.2249 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:17:29.2249 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:17:29.2599 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:17:29.3904 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 155.2135ms | 
+2025-03-24 16:17:29.4679 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 236.1780ms | 
+2025-03-24 16:17:29.5755 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 315.4854ms | 
+2025-03-24 16:17:29.6453 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:17:29.6653 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.0372ms | 
+2025-03-24 16:18:10.6347 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-24 16:18:10.9766 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:18:11.1190 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:18:12.0179 | INFO | Login attempt for Username: string | 
+2025-03-24 16:18:12.0179 | INFO | BL: User 'string' attempting to log in | 
+2025-03-24 16:18:14.5925 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:18:18.3134 | INFO | Executed DbCommand (306ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-24 16:18:18.7140 | WARN | BL: Login failed for user string | 
+2025-03-24 16:18:18.7189 | WARN | Login failed for Username: string. Invalid credentials. | 
+2025-03-24 16:18:19.0465 | ERROR | GlobalExceptionFilter caught: Invalid username or password. | 
+2025-03-24 16:18:19.0646 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:18:19.1073 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 7964.6785ms | 
+2025-03-24 16:18:19.1073 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:18:19.1272 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 500 - application/json;+charset=utf-8 8492.4413ms | 
+2025-03-24 16:22:55.2693 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/register application/json 84 | 
+2025-03-24 16:22:55.2981 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-24 16:22:55.2981 | INFO | Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:22:55.2981 | INFO | Register method called for Username: jyotisar | 
+2025-03-24 16:22:55.3130 | INFO | Registration attempt for Username: jyotisar | 
+2025-03-24 16:22:55.3130 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:22:55.4295 | INFO | Executed DbCommand (12ms) [Parameters=[@__username_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__username_0) OR ([u].[Email] = @__email_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END | 
+2025-03-24 16:22:55.9739 | INFO | Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [Salt], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4); | 
+2025-03-24 16:22:56.0797 | INFO | User jyotisar registered successfully. | 
+2025-03-24 16:22:56.0797 | INFO | User jyotisar registered successfully. | 
+2025-03-24 16:22:56.0797 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:22:56.0797 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 783.7558ms | 
+2025-03-24 16:22:56.0797 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' | 
+2025-03-24 16:22:56.0797 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/register application/json 84 - 200 - application/json;+charset=utf-8 818.8348ms | 
+2025-03-24 16:23:30.8444 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 84 | 
+2025-03-24 16:23:30.8598 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:23:30.8598 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:23:30.8802 | INFO | Login attempt for Username: jyotisar | 
+2025-03-24 16:23:30.8802 | INFO | BL: User 'jyotisar' attempting to log in | 
+2025-03-24 16:23:30.9971 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:23:31.0409 | INFO | Executed DbCommand (29ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-24 16:23:31.5807 | INFO | Login successful for Username: jyotisar | 
+2025-03-24 16:23:31.5807 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:23:31.5807 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 721.2006ms | 
+2025-03-24 16:23:31.5940 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:23:31.5940 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 84 - 200 - application/json;+charset=utf-8 750.3865ms | 
+2025-03-24 16:24:34.7389 | INFO | Request starting HTTP/2 GET https://localhost:7084/api/user/protected - - | 
+2025-03-24 16:24:34.7955 | INFO | Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user. | 
+2025-03-24 16:24:34.8214 | INFO | AuthenticationScheme: Bearer was challenged. | 
+2025-03-24 16:24:34.8214 | INFO | Request finished HTTP/2 GET https://localhost:7084/api/user/protected - - - 401 0 - 77.2800ms | 
+2025-03-24 16:25:19.2600 | INFO | Request starting HTTP/1.1 GET https://localhost:7084/api/user/protected application/json 61 | 
+2025-03-24 16:25:19.6009 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-24 16:25:19.6009 | INFO | Route matched with {action = "ProtectedEndpoint", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProtectedEndpoint() on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:25:19.6103 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:25:19.6269 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication) in 15.2152ms | 
+2025-03-24 16:25:19.6269 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ProtectedEndpoint (HelloGreetingApplication)' | 
+2025-03-24 16:25:19.6269 | INFO | Request finished HTTP/1.1 GET https://localhost:7084/api/user/protected application/json 61 - 200 - application/json;+charset=utf-8 368.2078ms | 
+2025-03-24 16:25:55.0740 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 16:25:55.0913 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:25:55.0960 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:25:55.1139 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:25:55.1388 | INFO | Executed DbCommand (15ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:29:22.1191 | INFO | Application is starting... | 
+2025-03-24 16:29:23.5577 | INFO | User profile is available. Using 'C:\Users\astha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. | 
+2025-03-24 16:29:24.0827 | INFO | Now listening on: https://localhost:7084 | 
+2025-03-24 16:29:24.0827 | INFO | Now listening on: http://localhost:5110 | 
+2025-03-24 16:29:24.9023 | INFO | Application started. Press Ctrl+C to shut down. | 
+2025-03-24 16:29:24.9546 | INFO | Hosting environment: Development | 
+2025-03-24 16:29:24.9546 | INFO | Content root path: C:\Users\astha\source\repos\HelloGreetingApplication\HelloGreetingApplication\ | 
+2025-03-24 16:29:25.3517 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.html - - | 
+2025-03-24 16:29:26.0617 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.html - - - 200 - text/html;charset=utf-8 719.7478ms | 
+2025-03-24 16:29:26.2439 | INFO | Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - | 
+2025-03-24 16:29:26.2439 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/index.js - - | 
+2025-03-24 16:29:26.2439 | INFO | Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - - | 
+2025-03-24 16:29:26.2591 | INFO | Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 20.2477ms | 
+2025-03-24 16:29:26.2825 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 38.4170ms | 
+2025-03-24 16:29:26.4647 | INFO | Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 216.8542ms | 
+2025-03-24 16:29:26.5372 | INFO | Request starting HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - | 
+2025-03-24 16:29:26.5569 | INFO | Request finished HTTP/2 GET https://localhost:7084/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 19.6383ms | 
+2025-03-24 16:29:33.7189 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 | 
+2025-03-24 16:29:34.0320 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:29:34.1900 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:29:38.2490 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:29:41.9060 | INFO | Executed DbCommand (282ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:29:43.2030 | INFO | Executing BadRequestObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:29:43.2253 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 8999.5418ms | 
+2025-03-24 16:29:43.2253 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:29:43.2637 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/forget-password application/json 23 - 400 - text/plain;+charset=utf-8 9544.8619ms | 
+2025-03-24 16:30:50.3285 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 71 | 
+2025-03-24 16:30:50.3285 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:30:50.3450 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:30:50.3600 | INFO | Login attempt for Username: string | 
+2025-03-24 16:30:50.3930 | INFO | BL: User 'string' attempting to log in | 
+2025-03-24 16:30:50.4178 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:30:50.4696 | INFO | Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-24 16:30:50.4696 | WARN | BL: Login failed for user string | 
+2025-03-24 16:30:50.4696 | WARN | Login failed for Username: string. Invalid credentials. | 
+2025-03-24 16:30:50.6930 | ERROR | GlobalExceptionFilter caught: Invalid username or password. | 
+2025-03-24 16:30:50.6930 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:30:50.7109 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 363.1852ms | 
+2025-03-24 16:30:50.7109 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:30:50.7109 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 71 - 500 - application/json;+charset=utf-8 386.0523ms | 
+2025-03-24 16:31:36.8455 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 69 | 
+2025-03-24 16:31:36.8455 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:31:36.8455 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:31:36.8794 | INFO | Login attempt for Username: user1 | 
+2025-03-24 16:31:36.8794 | INFO | BL: User 'user1' attempting to log in | 
+2025-03-24 16:31:36.9870 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:31:37.0160 | INFO | Executed DbCommand (19ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-24 16:31:37.0160 | WARN | BL: Login failed for user user1 | 
+2025-03-24 16:31:37.0160 | WARN | Login failed for Username: user1. Invalid credentials. | 
+2025-03-24 16:31:37.2160 | ERROR | GlobalExceptionFilter caught: Invalid username or password. | 
+2025-03-24 16:31:37.2160 | INFO | Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:31:37.2160 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 352.5856ms | 
+2025-03-24 16:31:37.2190 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:31:37.2190 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 69 - 500 - application/json;+charset=utf-8 371.2592ms | 
+2025-03-24 16:31:49.6271 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/login application/json 69 | 
+2025-03-24 16:31:49.6413 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:31:49.6413 | INFO | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.UserDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:31:49.6413 | INFO | Login attempt for Username: user2 | 
+2025-03-24 16:31:49.6413 | INFO | BL: User 'user2' attempting to log in | 
+2025-03-24 16:31:49.6413 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:31:49.6564 | INFO | Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0 | 
+2025-03-24 16:31:49.6564 | INFO | Login successful for Username: user2 | 
+2025-03-24 16:31:49.6564 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. | 
+2025-03-24 16:31:49.6564 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 20.3025ms | 
+2025-03-24 16:31:49.6564 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' | 
+2025-03-24 16:31:49.6564 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/login application/json 69 - 200 - application/json;+charset=utf-8 32.5208ms | 
+2025-03-24 16:32:52.4250 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 25 | 
+2025-03-24 16:32:52.6907 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:32:52.6907 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:32:52.7047 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:32:52.7232 | INFO | Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:32:52.8772 | INFO | Executing BadRequestObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:32:52.8772 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 186.0692ms | 
+2025-03-24 16:32:52.8772 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:32:52.8772 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 25 - 400 - text/plain;+charset=utf-8 462.1022ms | 
+2025-03-24 16:32:59.1455 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 25 | 
+2025-03-24 16:32:59.1455 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:32:59.1455 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:32:59.1455 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:32:59.1614 | INFO | Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:32:59.2693 | INFO | Executing BadRequestObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:32:59.2693 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 117.7148ms | 
+2025-03-24 16:32:59.2693 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:32:59.2693 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 25 - 400 - text/plain;+charset=utf-8 125.6352ms | 
+2025-03-24 16:33:10.6396 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 42 | 
+2025-03-24 16:33:10.6419 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:33:10.6419 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:33:10.6419 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:33:10.6658 | INFO | Executed DbCommand (11ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:33:10.6658 | INFO | Executing BadRequestObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:33:10.6658 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 24.3152ms | 
+2025-03-24 16:33:10.6658 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:33:10.6658 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 42 - 400 - text/plain;+charset=utf-8 31.1762ms | 
+2025-03-24 16:33:39.7193 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 42 | 
+2025-03-24 16:33:39.7393 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:33:39.7393 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:33:39.7393 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:33:39.7554 | INFO | Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:33:39.7554 | INFO | Executing BadRequestObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:33:39.7554 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 15.4547ms | 
+2025-03-24 16:33:39.7554 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:33:39.7554 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 42 - 400 - text/plain;+charset=utf-8 41.2205ms | 
+2025-03-24 16:34:31.3007 | INFO | Request starting HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 34 | 
+2025-03-24 16:34:31.3483 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:34:31.3483 | INFO | Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(ModelLayer.Model.ForgetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:34:31.3483 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:34:31.3591 | INFO | Executed DbCommand (13ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:34:36.0185 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:34:36.0185 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 4669.7977ms | 
+2025-03-24 16:34:36.0185 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:34:36.0329 | INFO | Request finished HTTP/1.1 POST https://localhost:7084/api/user/forget-password application/json 34 - 200 - text/plain;+charset=utf-8 4734.9858ms | 
+2025-03-24 16:35:50.2230 | INFO | Request starting HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 320 | 
+2025-03-24 16:35:50.2348 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:35:50.2348 | INFO | Route matched with {action = "ResetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ResetPassword(ModelLayer.Model.ResetPasswordDTO) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). | 
+2025-03-24 16:35:50.5412 | INFO | Entity Framework Core 6.0.36 initialized 'GreetingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None | 
+2025-03-24 16:35:50.5477 | INFO | Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Salt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 | 
+2025-03-24 16:35:51.0677 | INFO | Executed DbCommand (50ms) [Parameters=[@p4='?' (DbType = Guid), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [Salt] = @p2, [Username] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; | 
+2025-03-24 16:35:51.2281 | INFO | Executing OkObjectResult, writing value of type 'System.String'. | 
+2025-03-24 16:35:51.2281 | INFO | Executed action HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication) in 981.9657ms | 
+2025-03-24 16:35:51.2281 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication)' | 
+2025-03-24 16:35:51.2350 | INFO | Request finished HTTP/2 POST https://localhost:7084/api/user/reset-password application/json 320 - 200 - text/plain;+charset=utf-8 1004.9289ms | 
